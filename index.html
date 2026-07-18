@@ -5,41 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
+    /* Базовые стили */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
     body {
-      font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background-color: #ffffff;
       color: #000000;
       -webkit-font-smoothing: antialiased;
     }
+
+    /* УЛЬТРА-МИНИМАЛИСТИЧНЫЙ ЛОГОТИП */
     header {
-      padding: 50px 20px 30px 20px;
+      padding: 80px 20px 60px 20px;
       text-align: center;
       background: #ffffff;
-      border-bottom: 1px solid #f5f5f5;
     }
     .logo {
-      font-size: 28px;
-      font-weight: 300;
-      letter-spacing: 8px;
+      font-size: 24px;
+      font-weight: 200; /* Очень тонкий шрифт */
+      letter-spacing: 14px; /* Большое расстояние между буквами */
       text-transform: uppercase;
       text-decoration: none;
       color: #000000;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      opacity: 0.9;
     }
+
+    /* Сетка каталога (ровно 3 товара в ряд) */
     .catalog-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 20px 80px 20px;
+      padding: 0 20px 100px 20px;
     }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(3, 1fr); /* Ровно 3 колонки */
+      gap: 30px;
     }
+
+    /* Адаптив под мобилки (чтобы на телефонах они вставали в 1 колонку) */
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+
     .product-card {
       display: flex;
       flex-direction: column;
@@ -48,68 +63,55 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #fdfdfd;
+      background: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
-      height: 380px;
+      height: 400px;
       overflow: hidden;
-      border: 1px solid #f9f9f9;
     }
     .img-wrapper img {
-      max-width: 95%;
-      max-height: 95%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
     }
     .brand {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 400;
-      color: #111111;
+      color: #000000;
       margin-bottom: 6px;
     }
     .colors {
-      font-size: 13px;
-      color: #666666;
-      margin-bottom: 14px;
+      font-size: 12px;
+      color: #888888;
+      margin-bottom: 12px;
     }
     .price {
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 600;
       color: #000000;
       margin-bottom: 20px;
     }
+
+    /* Минималистичная кнопка */
     .btn-order {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background-color: #1a1a1a;
+      background-color: #000000;
       color: #ffffff;
-      padding: 12px 24px;
+      padding: 12px 0;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
-      border-radius: 6px;
-      transition: background-color 0.2s ease;
-      width: 85%;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 100%;
+      transition: opacity 0.2s ease;
     }
     .btn-order:hover {
-      background-color: #333333;
-    }
-    .btn-order svg {
-      width: 16px;
-      height: 16px;
-      margin-right: 8px;
-      fill: #25D366;
-    }
-    footer {
-      background-color: #ffffff;
-      color: #999999;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 11px;
-      letter-spacing: 1px;
-      border-top: 1px solid #f5f5f5;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -122,182 +124,41 @@
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- РЯД 1 -->
+      <!-- 1. Brunello Cucinelli -->
       <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Brunello Cucinelli"></div>
-        <h3 class="brand">Brunello Cucinelli Navy</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20Navy%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Stefano Ricci"></div>
-        <h3 class="brand">Stefano Ricci White</h3><p class="colors">1 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Loro Piana"></div>
-        <h3 class="brand">Loro Piana Black</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <div class="img-wrapper">
+          <img src="https://i.postimg.co/2544pt46/cuc.jpg" alt="Brunello Cucinelli">
+        </div>
+        <h3 class="brand">Brunello Cucinelli Cotton T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- РЯД 2 -->
+      <!-- 2. Stefano Ricci -->
       <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500" alt="Hugo Boss"></div>
-        <h3 class="brand">Hugo Boss White</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500" alt="Hugo Boss"></div>
-        <h3 class="brand">Hugo Boss Black</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Giorgio Armani"></div>
-        <h3 class="brand">Giorgio Armani White</h3><p class="colors">3 Rəng</p><p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <div class="img-wrapper">
+          <img src="https://i.postimg.co/c4cvzNgx/ric.jpg" alt="Stefano Ricci">
+        </div>
+        <h3 class="brand">Stefano Ricci Cotton T-Shirt</h3>
+        <p class="colors">1 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- РЯД 3 -->
+      <!-- 3. Loro Piana -->
       <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Giorgio Armani"></div>
-        <h3 class="brand">Giorgio Armani Black</h3><p class="colors">3 Rəng</p><p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Brunello Cucinelli"></div>
-        <h3 class="brand">Brunello Cucinelli V-Neck</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20V-Neck%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500" alt="Stefano Ricci"></div>
-        <h3 class="brand">Stefano Ricci Luxury Silk</h3><p class="colors">1 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20Luxury%20Silk%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- РЯД 4 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500" alt="Loro Piana"></div>
-        <h3 class="brand">Loro Piana Classic Summer</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20Classic%20Summer%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Hugo Boss"></div>
-        <h3 class="brand">Hugo Boss Slim Fit</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Slim%20Fit%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Giorgio Armani"></div>
-        <h3 class="brand">Giorgio Armani EA7</h3><p class="colors">3 Rəng</p><p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Giorgio%20Armani%20EA7%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- РЯД 5 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Brunello Cucinelli"></div>
-        <h3 class="brand">Brunello Cucinelli Premium</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20Premium%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500" alt="Stefano Ricci"></div>
-        <h3 class="brand">Stefano Ricci Sport</h3><p class="colors">1 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20Sport%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500" alt="Loro Piana"></div>
-        <h3 class="brand">Loro Piana Zen</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20Zen%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- РЯД 6 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Hugo Boss"></div>
-        <h3 class="brand">Hugo Boss Gold Line</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Gold%20Line%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Giorgio Armani"></div>
-        <h3 class="brand">Giorgio Armani Formal</h3><p class="colors">3 Rəng</p><p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Giorgio%20Armani%20Formal%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Brunello Cucinelli"></div>
-        <h3 class="brand">Brunello Cucinelli Casual</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20Casual%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- РЯД 7 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500" alt="Stefano Ricci"></div>
-        <h3 class="brand">Stefano Ricci Royal</h3><p class="colors">1 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20Royal%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500" alt="Loro Piana"></div>
-        <h3 class="brand">Loro Piana Extra Fine</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20Extra%20Fine%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Hugo Boss"></div>
-        <h3 class="brand">Hugo Boss Urban</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Urban%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- РЯД 8 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Giorgio Armani"></div>
-        <h3 class="brand">Giorgio Armani Exclusive</h3><p class="colors">3 Rəng</p><p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Giorgio%20Armani%20Exclusive%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Brunello Cucinelli"></div>
-        <h3 class="brand">Brunello Cucinelli Pure Cotton</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20Pure%20Cotton%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500" alt="Stefano Ricci"></div>
-        <h3 class="brand">Stefano Ricci Signature</h3><p class="colors">1 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20Signature%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- РЯД 9 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500" alt="Loro Piana"></div>
-        <h3 class="brand">Loro Piana Summer Walk Style</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20Summer%20Walk%20Style%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Hugo Boss"></div>
-        <h3 class="brand">Hugo Boss Orange Label</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Orange%20Label%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Giorgio Armani"></div>
-        <h3 class="brand">Giorgio Armani Milano</h3><p class="colors">3 Rəng</p><p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Giorgio%20Armani%20Milano%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- РЯД 10 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Brunello Cucinelli"></div>
-        <h3 class="brand">Brunello Cucinelli Soft</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20Soft%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500" alt="Stefano Ricci"></div>
-        <h3 class="brand">Stefano Ricci Premium White</h3><p class="colors">1 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20Premium%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-      <div class="product-card">
-        <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500" alt="Loro Piana"></div>
-        <h3 class="brand">Loro Piana Prestige</h3><p class="colors">2 Rəng</p><p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20Prestige%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <div class="img-wrapper">
+          <img src="https://i.postimg.co/bNJj858m/loro.jpg" alt="Loro Piana">
+        </div>
+        <h3 class="brand">Loro Piana Cotton T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
     </div>
   </main>
-
-  <footer>
-    &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
-  </footer>
 
 </body>
 </html>
