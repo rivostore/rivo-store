@@ -51,7 +51,7 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #f5f5f5; /* Фирменный серый фон Diff Style */
+      background: #f7f7f7; /* Мягкий студийный фон */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -59,9 +59,10 @@
       height: 380px;
       overflow: hidden;
     }
-    .img-wrapper svg {
-      width: 70%;
-      height: 70%;
+    .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Фотографии заполняют блок ровно и аккуратно */
     }
     .brand {
       font-size: 14px;
@@ -124,7 +125,7 @@
       <!-- 1. Hugo Boss White -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#ffffff" stroke="#dcdcdc" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000001/ts_white.jpg" alt="Hugo Boss White">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -135,7 +136,7 @@
       <!-- 2. Hugo Boss Black -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#141414" stroke="#000000" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000002/ts_black.jpg" alt="Hugo Boss Black">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -143,10 +144,10 @@
         <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- 3. Hermes (Navy Blue) -->
+      <!-- 3. Hermes (Navy) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#0f1c3f" stroke="#081026" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000003/ts_navy.jpg" alt="Hermes T-Shirt">
         </div>
         <h3 class="brand">Hermes Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -157,7 +158,7 @@
       <!-- 4. Armani White -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#ffffff" stroke="#dcdcdc" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000001/ts_white.jpg" alt="Armani White">
         </div>
         <h3 class="brand">Giorgio Armani T-Shirt</h3>
         <p class="colors">3 Rəng</p>
@@ -168,7 +169,7 @@
       <!-- 5. Armani Black -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#141414" stroke="#000000" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000002/ts_black.jpg" alt="Armani Black">
         </div>
         <h3 class="brand">Giorgio Armani T-Shirt</h3>
         <p class="colors">3 Rəng</p>
@@ -179,7 +180,7 @@
       <!-- 6. Prada (Gray) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#a0a0a0" stroke="#888888" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000004/ts_gray.jpg" alt="Prada T-Shirt">
         </div>
         <h3 class="brand">Prada Milano T-Shirt</h3>
         <p class="colors">1 Rəng</p>
@@ -190,7 +191,7 @@
       <!-- 7. Ralph Lauren White -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#ffffff" stroke="#dcdcdc" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000001/ts_white.jpg" alt="Ralph Lauren">
         </div>
         <h3 class="brand">Ralph Lauren Polo T-Shirt</h3>
         <p class="colors">4 Rəng</p>
@@ -201,7 +202,7 @@
       <!-- 8. Calvin Klein Black -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#141414" stroke="#000000" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000002/ts_black.jpg" alt="Calvin Klein">
         </div>
         <h3 class="brand">Calvin Klein Jeans T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -209,10 +210,10 @@
         <a href="https://wa.me/994507082548?text=Salam!%20Calvin%20Klein%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- 9. Lacoste Blue -->
+      <!-- 9. Lacoste Navy -->
       <div class="product-card">
         <div class="img-wrapper">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L32,12 L42,19 L50,14 L58,19 L68,12 L80,20 L86,52 L76,55 L73,88 L27,88 L24,55 L14,52 Z" fill="#0f1c3f" stroke="#081026" stroke-width="1.5"/></svg>
+          <img src="https://res.cloudinary.com/dfkhvxf4k/image/upload/v1710000003/ts_navy.jpg" alt="Lacoste">
         </div>
         <h3 class="brand">Lacoste Classic T-Shirt</h3>
         <p class="colors">3 Rəng</p>
