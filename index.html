@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
-    /* Базовые стили */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -26,8 +25,8 @@
     }
     .logo {
       font-size: 24px;
-      font-weight: 200; /* Очень тонкий шрифт */
-      letter-spacing: 14px; /* Большое расстояние между буквами */
+      font-weight: 200; /* Максимально тонкий */
+      letter-spacing: 16px; /* Элегантный большой отступ */
       text-transform: uppercase;
       text-decoration: none;
       color: #000000;
@@ -43,11 +42,11 @@
     }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Ровно 3 колонки */
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
     }
 
-    /* Адаптив под мобилки (чтобы на телефонах они вставали в 1 колонку) */
+    /* Адаптив под мобильные устройства */
     @media (max-width: 768px) {
       .product-grid {
         grid-template-columns: 1fr;
@@ -63,18 +62,18 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #ffffff;
+      background: #fcfcfc; /* Мягкий минималистичный фон для карточки */
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
       height: 400px;
       overflow: hidden;
+      border-radius: 4px;
     }
-    .img-wrapper img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+    .img-wrapper svg {
+      width: 70%;
+      height: 70%;
     }
     .brand {
       font-size: 15px;
@@ -94,14 +93,14 @@
       margin-bottom: 20px;
     }
 
-    /* Минималистичная кнопка */
+    /* Стильная монохромная кнопка */
     .btn-order {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       background-color: #000000;
       color: #ffffff;
-      padding: 12px 0;
+      padding: 14px 0;
       text-decoration: none;
       font-size: 12px;
       font-weight: 500;
@@ -109,6 +108,7 @@
       text-transform: uppercase;
       width: 100%;
       transition: opacity 0.2s ease;
+      border-radius: 2px;
     }
     .btn-order:hover {
       opacity: 0.8;
@@ -127,7 +127,10 @@
       <!-- 1. Brunello Cucinelli -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://i.postimg.co/2544pt46/cuc.jpg" alt="Brunello Cucinelli">
+          <!-- Автономный силуэт футболки (Navy) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 9a1 1 0 0 1-.7-1.7l3-3a1 1 0 0 1 1.4 0l1.8 1.8a2 2 0 0 0 2.8 0L14.1 4.3a1 1 0 0 1 1.4 0l3 3A1 1 0 0 1 17.8 9H16v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9H4z"/>
+          </svg>
         </div>
         <h3 class="brand">Brunello Cucinelli Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -138,7 +141,10 @@
       <!-- 2. Stefano Ricci -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://i.postimg.co/c4cvzNgx/ric.jpg" alt="Stefano Ricci">
+          <!-- Автономный силуэт футболки (White/Gray) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 9a1 1 0 0 1-.7-1.7l3-3a1 1 0 0 1 1.4 0l1.8 1.8a2 2 0 0 0 2.8 0L14.1 4.3a1 1 0 0 1 1.4 0l3 3A1 1 0 0 1 17.8 9H16v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9H4z"/>
+          </svg>
         </div>
         <h3 class="brand">Stefano Ricci Cotton T-Shirt</h3>
         <p class="colors">1 Rəng</p>
@@ -149,7 +155,10 @@
       <!-- 3. Loro Piana -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://i.postimg.co/bNJj858m/loro.jpg" alt="Loro Piana">
+          <!-- Автономный силуэт футболки (Dark) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 9a1 1 0 0 1-.7-1.7l3-3a1 1 0 0 1 1.4 0l1.8 1.8a2 2 0 0 0 2.8 0L14.1 4.3a1 1 0 0 1 1.4 0l3 3A1 1 0 0 1 17.8 9H16v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9H4z"/>
+          </svg>
         </div>
         <h3 class="brand">Loro Piana Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
