@@ -19,7 +19,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #ffffff;
-            color: #000000;
+            color: #001a3d; /* Благородный темно-синий под цвет логотипа */
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
@@ -28,7 +28,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 35px 5%;
+            padding: 20px 5%;
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             position: sticky;
@@ -37,13 +37,10 @@
             border-bottom: 1px solid #f2f2f2;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 7px;
-            text-transform: uppercase;
-            color: #000000;
-            text-decoration: none;
+        .header-logo {
+            height: 50px; /* Аккуратный логотип в шапке */
+            width: auto;
+            display: block;
         }
 
         .hero-section {
@@ -67,12 +64,12 @@
             line-height: 1.15;
             letter-spacing: -1px;
             margin-bottom: 25px;
-            color: #000000;
+            color: #001a3d;
         }
 
         .hero-text p {
             font-size: 15px;
-            color: #555555;
+            color: #556575;
             line-height: 1.7;
             font-weight: 300;
             margin-bottom: 40px;
@@ -81,7 +78,7 @@
         .tilda-btn {
             display: inline-block;
             padding: 18px 45px;
-            background-color: #000000;
+            background-color: #001a3d;
             color: #ffffff;
             text-decoration: none;
             font-size: 13px;
@@ -89,26 +86,35 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            border: 1px solid #000000;
+            border: 1px solid #001a3d;
         }
 
         .tilda-btn:hover {
             background-color: #ffffff;
-            color: #000000;
+            color: #001a3d;
         }
 
         .hero-image {
             flex: 1;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
         }
 
-        .hero-image img {
+        /* Контейнер для большого логотипа на главном экране */
+        .hero-logo-container {
             width: 100%;
-            max-width: 520px;
-            height: 680px;
-            object-fit: cover;
-            filter: brightness(0.97);
+            max-width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-logo-main {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .catalog-section {
@@ -127,11 +133,12 @@
             letter-spacing: 4px;
             text-transform: uppercase;
             margin-bottom: 15px;
+            color: #001a3d;
         }
 
         .section-title p {
             font-size: 14px;
-            color: #888888;
+            color: #8895a5;
             font-weight: 300;
         }
 
@@ -144,7 +151,7 @@
         .product-card {
             text-align: left;
             text-decoration: none;
-            color: #000000;
+            color: #001a3d;
             display: block;
         }
 
@@ -172,19 +179,19 @@
             font-weight: 400;
             letter-spacing: 0.5px;
             margin-bottom: 8px;
-            color: #000000;
+            color: #001a3d;
         }
 
         .product-card .price {
             font-size: 14px;
-            color: #000000;
+            color: #001a3d;
             font-weight: 500;
             margin-bottom: 6px;
         }
 
         .product-card .order-badge {
             font-size: 11px;
-            color: #888888;
+            color: #8895a5;
             font-weight: 400;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -195,12 +202,12 @@
         }
 
         .product-card:hover .order-badge {
-            color: #000000;
-            border-bottom-color: #000000;
+            color: #001a3d;
+            border-bottom-color: #001a3d;
         }
 
         .concept-section {
-            background-color: #fbfbfb;
+            background-color: #fbfcfd;
             padding: 140px 8%;
             text-align: center;
         }
@@ -211,11 +218,12 @@
             letter-spacing: 5px;
             text-transform: uppercase;
             margin-bottom: 30px;
+            color: #001a3d;
         }
 
         .concept-section p {
             font-size: 15px;
-            color: #666666;
+            color: #556575;
             max-width: 700px;
             margin: 0 auto;
             line-height: 2;
@@ -228,7 +236,7 @@
             background-color: #ffffff;
             border-top: 1px solid #f2f2f2;
             font-size: 11px;
-            color: #999999;
+            color: #99a5b5;
             letter-spacing: 2px;
         }
 
@@ -248,8 +256,9 @@
                 justify-content: center;
                 width: 100%;
             }
-            .hero-image img {
-                height: 485px;
+            .hero-logo-container {
+                height: 350px;
+                max-width: 350px;
             }
             .catalog-section {
                 padding: 70px 5%;
@@ -260,11 +269,12 @@
 <body>
 
     <header>
-        <div class="logo">RIVO</div>
+        <!-- Логотип в шапке сайта -->
+        <img src="logo.png" alt="RIVO" class="header-logo">
     </header>
 
     <main>
-        <!-- 1. ƏSAS BANNER -->
+        <!-- 1. ƏSAS BANNER (С твоим фирменным большим логотипом) -->
         <section class="hero-section">
             <div class="hero-text">
                 <h2>Müasir Stil & Premium Keyfiyyət</h2>
@@ -272,56 +282,59 @@
                 <a href="#kataloq" class="tilda-btn">Məhsullara Bax</a>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?q=80&w=600&auto=format&fit=crop" alt="RIVO Premium Concept">
+                <div class="hero-logo-container">
+                    <!-- Большой круглый логотип по центру правого блока -->
+                    <img src="logo.png" alt="RIVO STORE Логотип" class="hero-logo-main">
+                </div>
             </div>
         </section>
 
-        <!-- 2. KATALOQ BÖLMƏSİ (Все товары заменены на T-Shirt) -->
+        <!-- 2. KATALOQ BÖLMƏSİ (DIFF STYLE LOOK-ALİKE T-SHIRTS) -->
         <section class="catalog-section" id="kataloq">
             <div class="section-title">
-                <h3>T-Shirt Kolleksiyası</h3>
-                <p>Premium parçalardan hazırlanan minimalist dizaynlar</p>
+                <h3>Premium T-Shirt Kolleksiyası</h3>
+                <p>Dünya brendlərinin minimalist və lüks dizaynları</p>
             </div>
 
             <div class="products-grid">
                 
-                <!-- Məhsul 1: Basic White T-Shirt -->
-                <a href="https://wa.me/994507082548?text=Salam,%20Premium%20Minimalist%20T-Shirt%20(Ağ)%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                <!-- Məhsul 1: Loro Piana -->
+                <a href="https://wa.me/994507082548?text=Salam,%20Loro%20Piana%20Premium%20T-Shirt%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=500&auto=format&fit=crop" alt="Premium Minimalist T-Shirt White">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=500&auto=format&fit=crop" alt="Loro Piana T-Shirt">
                     </div>
-                    <h4>Premium Minimalist T-Shirt (Ağ)</h4>
-                    <div class="price">45.00 AZN</div>
+                    <h4>Loro Piana Silk-Cotton T-Shirt</h4>
+                    <div class="price">85.00 AZN</div>
                     <div class="order-badge">Sifariş et (WhatsApp)</div>
                 </a>
 
-                <!-- Məhsul 2: Slim Fit Black T-Shirt -->
-                <a href="https://wa.me/994507082548?text=Salam,%20Klassik%20Qara%20T-Shirt%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                <!-- Məhsul 2: Hugo Boss -->
+                <a href="https://wa.me/994507082548?text=Salam,%20Hugo%20Boss%20Minimalist%20T-Shirt%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=500&auto=format&fit=crop" alt="Classic Black T-Shirt">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=500&auto=format&fit=crop" alt="Hugo Boss T-Shirt">
                     </div>
-                    <h4>Klassik Pambıq T-Shirt (Qara)</h4>
-                    <div class="price">45.00 AZN</div>
+                    <h4>Hugo Boss Mınımalıst T-Shirt</h4>
+                    <div class="price">65.00 AZN</div>
                     <div class="order-badge">Sifariş et (WhatsApp)</div>
                 </a>
 
-                <!-- Məhsul 3: Oversize Grey T-Shirt -->
-                <a href="https://wa.me/994507082548?text=Salam,%20Oversize%20T-Shirt%20(Boz)%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                <!-- Məhsul 3: Brunello Cucinelli -->
+                <a href="https://wa.me/994507082548?text=Salam,%20Brunello%20Cucinelli%20Luxury%20T-Shirt%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=500&auto=format&fit=crop" alt="Oversize Grey T-Shirt">
+                        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=500&auto=format&fit=crop" alt="Brunello Cucinelli T-Shirt">
                     </div>
-                    <h4>Oversize Premium T-Shirt (Boz)</h4>
-                    <div class="price">55.00 AZN</div>
+                    <h4>Brunello Cucinelli Luxury T-Shirt</h4>
+                    <div class="price">90.00 AZN</div>
                     <div class="order-badge">Sifariş et (WhatsApp)</div>
                 </a>
 
-                <!-- Məhsul 4: Premium Heavyweight Sage T-Shirt -->
-                <a href="https://wa.me/994507082548?text=Salam,%20Premium%20Heavyweight%20T-Shirt%20(Zeytun)%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                <!-- Məhsul 4: Zilli -->
+                <a href="https://wa.me/994507082548?text=Salam,%20Zilli%20Premium%20T-Shirt%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=500&auto=format&fit=crop" alt="Premium Heavyweight T-Shirt">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=500&auto=format&fit=crop" alt="Zilli T-Shirt">
                     </div>
-                    <h4>Heavyweight T-Shirt (Tünd Qrafıt)</h4>
-                    <div class="price">60.00 AZN</div>
+                    <h4>Zilli Premium Cotton T-Shirt</h4>
+                    <div class="price">95.00 AZN</div>
                     <div class="order-badge">Sifariş et (WhatsApp)</div>
                 </a>
 
