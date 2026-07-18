@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
-    /* Глобальный сброс стилей */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -18,7 +17,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Тонкий минималистичный хедер RIVO */
     header {
       padding: 50px 20px 30px 20px;
       text-align: center;
@@ -34,14 +32,12 @@
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
-    /* Контейнер каталога */
     .catalog-container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px 20px 80px 20px;
     }
 
-    /* Сетка товаров */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -55,7 +51,7 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #fcfcfc; /* Чистый светлый фон */
+      background: #f5f5f5; /* Фирменный серый фон Diff Style */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -63,10 +59,9 @@
       height: 380px;
       overflow: hidden;
     }
-    .img-wrapper img {
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain; /* Вещи лежат ровно, как на ладони */
+    .img-wrapper svg {
+      width: 75%;
+      height: 75%;
     }
     .brand {
       font-size: 14px;
@@ -86,7 +81,6 @@
       margin-bottom: 20px;
     }
 
-    /* Темно-синяя кнопка заказа */
     .btn-order {
       display: inline-flex;
       align-items: center;
@@ -107,7 +101,6 @@
       background-color: #000055;
     }
     
-    /* Футер */
     footer {
       background-color: #ffffff;
       color: #999999;
@@ -121,16 +114,146 @@
 </head>
 <body>
 
-  <!-- ХЕДЕР -->
   <header>
     <a href="#" class="logo">RIVO</a>
   </header>
 
-  <!-- КАТАЛОГ С ВШИТЫМИ ФОТО (БАЗОВЫЕ СЛОЖЕННЫЕ ФУТБОЛКИ) -->
   <main class="catalog-container">
     <div class="product-grid">
       
       <!-- 1. Hugo Boss White -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUXGB0YGBcYGBoaGhwfGhsaGhobGxsdHSggGholGxsaITEhJSkrLi4uGB8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAGQAZAMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABgQFAQMHAgj/xAA6EAABAwIEAwYDBwUAAwEBAAABAAIDBBEFEiExQVEGImFxgRORobHB8BQyQlLR4fFicoIjc5I0Y//EABkBAAMBAQEAAAAAAAAAAAAAAAECAwAEBf/EACcRAQEAAgIBAgUFAQAAAAAAAAABAhEhMQMSQVEDImFxgRNCkbHB/9oADAMBAAIRAxEAPwDuNKtK8K2K2a8O0q0rwK2K8O0q0rwrYrwrwrwrwK8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8K8
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#e0e0e0"/>
+          </svg>
+        </div>
+        <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 2. Hugo Boss Black -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#111111" stroke="#222222" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#333333"/>
+          </svg>
+        </div>
+        <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 3. Hermes (Navy Blue) -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#0b132b" stroke="#1c2541" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#1c2541"/>
+          </svg>
+        </div>
+        <h3 class="brand">Hermes Cotton T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Hermes%20T-Shirt%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 4. Armani White -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#e0e0e0"/>
+          </svg>
+        </div>
+        <h3 class="brand">Giorgio Armani T-Shirt</h3>
+        <p class="colors">3 Rəng</p>
+        <p class="price">35 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 5. Armani Black -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#111111" stroke="#222222" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#333333"/>
+          </svg>
+        </div>
+        <h3 class="brand">Giorgio Armani T-Shirt</h3>
+        <p class="colors">3 Rəng</p>
+        <p class="price">35 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 6. Prada (Gray) -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#dcdcdc" stroke="#c0c0c0" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#c0c0c0"/>
+          </svg>
+        </div>
+        <h3 class="brand">Prada Milano T-Shirt</h3>
+        <p class="colors">1 Rəng</p>
+        <p class="price">38 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Prada%20T-Shirt%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 7. Ralph Lauren White -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#e0e0e0"/>
+          </svg>
+        </div>
+        <h3 class="brand">Ralph Lauren Polo T-Shirt</h3>
+        <p class="colors">4 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Ralph%20Lauren%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 8. Calvin Klein Black -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#111111" stroke="#222222" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#333333"/>
+          </svg>
+        </div>
+        <h3 class="brand">Calvin Klein Jeans T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">30 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Calvin%20Klein%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 9. Lacoste Navy -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,30 L35,22 C38,26,43,28,50,28 C57,28,62,26,65,22 L75,30 L85,50 L73,53 L73,105 L27,105 L27,53 L15,50 Z" fill="#0b132b" stroke="#1c2541" stroke-width="1.5"/>
+            <rect x="35" y="60" width="30" height="8" rx="2" fill="#1c2541"/>
+          </svg>
+        </div>
+        <h3 class="brand">Lacoste Classic T-Shirt</h3>
+        <p class="colors">3 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Lacoste%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer>
+    &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
+  </footer>
+
+</body>
+</html>
