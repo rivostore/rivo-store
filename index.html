@@ -25,8 +25,8 @@
     }
     .logo {
       font-size: 20px;
-      font-weight: 200; /* Очень тонкий */
-      letter-spacing: 24px; /* Огромный премиальный разряд букв */
+      font-weight: 200;
+      letter-spacing: 24px;
       text-transform: uppercase;
       text-decoration: none;
       color: #000000;
@@ -48,7 +48,6 @@
       gap: 40px;
     }
 
-    /* Мобильная адаптация */
     @media (max-width: 768px) {
       .product-grid {
         grid-template-columns: 1fr;
@@ -95,7 +94,6 @@
       margin-bottom: 20px;
     }
 
-    /* Минималистичная кнопка */
     .btn-order {
       display: inline-flex;
       align-items: center;
@@ -127,23 +125,7 @@
       <!-- 1. Hugo Boss Colorblock (Navy) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <!-- Картинка вшита прямо в код, она загрузится 100% -->
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='100%' height='100%'>
-            <rect width='100%' height='100%' fill='white'/>
-            <!-- Рукава -->
-            <path d='M 70,160 L 120,120 L 150,150 L 130,210 L 100,200 Z' fill='%231d3557'/>
-            <path d='M 330,160 L 280,120 L 250,150 L 270,210 L 300,200 Z' fill='%231d3557'/>
-            <!-- Тело (Сине-голубой колорблок) -->
-            <path d='M 120,120 L 280,120 L 270,360 L 130,360 Z' fill='%231d3557'/>
-            <rect x='126' y='180' width='148' height='40' fill='%234ba3a5'/>
-            <rect x='128' y='220' width='144' height='30' fill='%23a8dadc'/>
-            <rect x='129' y='250' width='142' height='15' fill='%23e6e6e6'/>
-            <!-- Воротник -->
-            <path d='M 170,120 Q 200,145 230,120 Z' fill='white'/>
-            <path d='M 170,120 Q 200,145 230,120' stroke='%2312223a' stroke-width='3' fill='none'/>
-            <!-- Надпись BOSS -->
-            <text x='200' y='173' font-family='Arial, sans-serif' font-weight='bold' font-size='10' fill='white' text-anchor='middle' letter-spacing='1'>BOSS</text>
-          </svg>" alt="Hugo Boss Cotton T-Shirt">
+          <img src="data:image/webp;base64,UklGRqAOAABXRUJQVlA4TJAOAAAvd8ADED8gEEb/f2b3r5AIiID1v/z/W7vbfnvcPZvsbntBvXuuI4PZqE4mP8nMRf/Z0a0/k51M3oYlS5IkSZIkSZIkSZIkSZrGZ775m7/5m4+v+b7m+5rn/3lO1K+c1D85qX9yUq+cVJwkSZIkSZIkSZIkSZIkabTszMyePTMzs3NmZmaT1N/8zd/8zceXZ8+evTtnZmbPzMzsmpk5UUmSJEmSJEmSJEmSJEmSdM4vSZIkSZIkSZIkSZIkSbp2ZmZ2zsysmZkzm6R+Uf3qF1X3v6hmZo6ZmZm9zZ05UUmSJEmSJEmSJEmSJEmS9CVJkiRJkiRJkiRJkiRJ0qUzM7Nrn5mZ2TUza0n9yv3K/crt1q1eOak4SZIkSZIkSZIkSZIkSdK/JEmSJEmSJEmSJEmSJEk/OzNzzsw5M2d2VpKqfvWrX1TV/945Z+acMzNn5swmqThJkiRJkiRJkiRJkiRJ0uUvSZIkSZIkSZIkSZIkSdrrnJmdPXt2zpmdtZLUf1D/Qf3H/U/qP6j/oH7lpOIkSZIkSZIkSZIkSZIkSd+SJMlP/v//f/r9v3K/cpXalZOqpB8A" alt="Hugo Boss Cotton T-Shirt">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">3 Rəng</p>
@@ -154,24 +136,7 @@
       <!-- 2. Hugo Boss Logo Line (White) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='100%' height='100%'>
-            <rect width='100%' height='100%' fill='white'/>
-            <!-- Футболка -->
-            <path d='M 70,160 L 120,120 L 150,150 L 130,210 L 100,200 Z' fill='%23f7f7f7' stroke='%23e0e0e0' stroke-width='1'/>
-            <path d='M 330,160 L 280,120 L 250,150 L 270,210 L 300,200 Z' fill='%23f7f7f7' stroke='%23e0e0e0' stroke-width='1'/>
-            <path d='M 120,120 L 280,120 L 270,360 L 130,360 Z' fill='%23f7f7f7' stroke='%23e0e0e0' stroke-width='1'/>
-            <path d='M 170,120 Q 200,140 230,120 Z' fill='white'/>
-            <path d='M 170,120 Q 200,140 230,120' stroke='%23e0e0e0' stroke-width='2' fill='none'/>
-            <!-- Полосы и Лого -->
-            <line x1='125' y1='195' x2='275' y2='195' stroke='black' stroke-width='1.5'/>
-            <line x1='125' y1='200' x2='275' y2='200' stroke='black' stroke-width='1.5'/>
-            <rect x='185' y='190' width='30' height='14' fill='%23f7f7f7'/>
-            <text x='200' y='201' font-family='Arial, sans-serif' font-weight='bold' font-size='11' fill='black' text-anchor='middle' letter-spacing='0.5'>BOSS</text>
-            <!-- Бирка (Зеленая сбоку) -->
-            <polygon points='175,140 190,145 180,175 165,170' fill='%232b4c3f'/>
-            <line x1='182' y1='125' x2='175' y2='140' stroke='%23a3b899' stroke-width='1.5'/>
-            <text x='178' y='160' font-family='Arial, sans-serif' font-size='6' fill='%23a3b899' transform='rotate(18 178 160)' text-anchor='middle'>BOSS</text>
-          </svg>" alt="Hugo Boss Cotton T-Shirt">
+          <img src="data:image/webp;base64,UklGRpgOAABXRUJQVlA4TIwOAAAvfcADEB8gEEb/f2b3t5AIiID1v/y/293m22f3bLI1lD1WkhwJyEZ1MuWSzFz0n7nZemU1WTzZ0SUhSZIkSZIkSZIkSZIkSdJ0PvPN3/zNx9d8X/N9zfP/PCdqykn5pCflk56UKScVJ0mSJEmSJEmSJEmSJEmS5mdm9uyZmZmdMzMzm6R+Uf2i6v4X1czMMTMzs7e5Mycqv6RJkiRJkiRJkiRJkiRJ0qUzM7Nrn5mZ2TUza0n9qvpV9avm/1bOOTNnnJkzzsxpkoqTJEmSJEmSJEmSJEmSJP1LkiRJkiRJkiRJkiRJkqSfnZk5Z+acmTM7K0lV//rVr35V1f+ec87MOXNmzjgzk4qTJEmSJEmSJEmSJEmSJE07Mzt79uzZMztrJan/qP6j+qP+Vf+V/ld+SpIkSZIkSZIkSZIkSZIkf0mS5E9+8o//P/1fvl+5So3KSVJxEAA=" alt="Hugo Boss Cotton T-Shirt">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">3 Rəng</p>
@@ -182,26 +147,7 @@
       <!-- 3. Hugo Boss Big Logo (Navy) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='100%' height='100%'>
-            <rect width='100%' height='100%' fill='white'/>
-            <!-- Рукава -->
-            <path d='M 70,160 L 120,120 L 150,150 L 130,210 L 100,200 Z' fill='%231c2541'/>
-            <path d='M 330,160 L 280,120 L 250,150 L 270,210 L 300,200 Z' fill='%231c2541'/>
-            <!-- Тело -->
-            <path d='M 120,120 L 280,120 L 270,360 L 130,360 Z' fill='%231c2541'/>
-            <path d='M 170,120 Q 200,145 230,120 Z' fill='white'/>
-            <!-- Квадратное лого BOSS -->
-            <g fill='white' font-family='Arial, sans-serif' font-weight='bold' font-size='32' text-anchor='middle'>
-              <text x='180' y='210'>B</text>
-              <text x='220' y='210'>O</text>
-              <text x='180' y='245'>S</text>
-              <text x='220' y='245'>S</text>
-            </g>
-            <!-- Черная бирка на веревочке -->
-            <polygon points='260,150 280,160 270,195 250,185' fill='%23111111'/>
-            <line x1='252' y1='128' x2='260' y2='150' stroke='%23555555' stroke-width='1'/>
-            <text x='265' y='178' font-family='Arial, sans-serif' font-size='7' fill='white' transform='rotate(26 265 178)' text-anchor='middle'>BOSS</text>
-          </svg>" alt="Hugo Boss Cotton T-Shirt">
+          <img src="data:image/webp;base64,UklGRpQOAABXRUJQVlA4TIgOAAAvecADEB8gEEb/f2b3r5AIiID1v/z/293tNrfP7tlkKCh7tCQZEpCN6mTykcxc9J+d3XplNVksmtElIUmSJEmSJEmSJEmSJEmSls9n/uZv/ubja76v+b7m+X+eEzUpJ+WTnpRPEpKScpJUnCRJkiRJkiRJkiRJkiRJOzMzt2fPzMzsmpmZTVK/qH5Rdf+LampmZpM0p2tmTpJUnCRJkiRJkiRJkiRJkiRpfkmSJDszs2fPzJnZWUnqV+5X7leu/1fOOXPOSZLmnDnjpOIkSZIkSZIkSZIkSZIkSf9KkiT5yU/+yf9P/5fvV65SpxolFSc5SZIkSZIkSZIkSZIkSZJOOzMzOztmZs7MTEkaTf2kfpI0M5OkKicVJ0mSJEmSJEmSJEmSJEmS/iVJkiRJkiRJkiRJkiRJ+q0zMztmzpgxMzsnaTR/0vxJ86QqqcpJxUmSJEmSJEmSJEmSJEmSdM5/SZLkJ//0L//0L/dfuV+5SnXKSVJxEAA=" alt="Hugo Boss Cotton T-Shirt">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">1 Rəng</p>
