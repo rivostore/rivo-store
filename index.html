@@ -1,387 +1,136 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIVO Store | Premium Kişi Geyimləri</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff;
-            color: #001a3d;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 5%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #f2f2f2;
-        }
-
-        .header-logo-text {
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-            color: #001a3d;
-            text-decoration: none;
-        }
-
-        .hero-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 8%;
-            background-color: #ffffff;
-            min-height: 85vh;
-            gap: 5%;
-        }
-
-        .hero-text {
-            flex: 1;
-            max-width: 500px;
-        }
-
-        .hero-text h2 {
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 1.15;
-            letter-spacing: -1px;
-            margin-bottom: 25px;
-            color: #001a3d;
-        }
-
-        .hero-text p {
-            font-size: 15px;
-            color: #556575;
-            line-height: 1.7;
-            font-weight: 300;
-            margin-bottom: 40px;
-        }
-
-        .tilda-btn {
-            display: inline-block;
-            padding: 18px 45px;
-            background-color: #001a3d;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            border: 1px solid #001a3d;
-        }
-
-        .tilda-btn:hover {
-            background-color: #ffffff;
-            color: #001a3d;
-        }
-
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .hero-text-banner {
-            width: 100%;
-            max-width: 450px;
-            height: 450px;
-            border: 1px solid #001a3d;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #ffffff;
-        }
-
-        .hero-banner-title {
-            font-size: 54px;
-            font-weight: 600;
-            letter-spacing: 14px;
-            text-transform: uppercase;
-            color: #001a3d;
-            margin-bottom: 10px;
-            padding-left: 14px;
-        }
-
-        .hero-banner-subtitle {
-            font-size: 12px;
-            font-weight: 300;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: #8895a5;
-        }
-
-        .catalog-section {
-            padding: 120px 8%;
-            background-color: #ffffff;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .section-title h3 {
-            font-size: 28px;
-            font-weight: 400;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            color: #001a3d;
-        }
-
-        .section-title p {
-            font-size: 14px;
-            color: #8895a5;
-            font-weight: 300;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 60px 40px;
-        }
-
-        .product-card {
-            text-align: center;
-            text-decoration: none;
-            color: #001a3d;
-            display: block;
-        }
-
-        .image-wrapper {
-            width: 100%;
-            height: 380px;
-            overflow: hidden;
-            background-color: #ffffff;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.6s ease;
-        }
-
-        .product-card:hover .image-wrapper img {
-            transform: scale(1.04);
-        }
-
-        .product-card h4 {
-            font-size: 15px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-            color: #222;
-        }
-
-        .product-card .colors-count {
-            font-size: 13px;
-            color: #8895a5;
-            margin-bottom: 8px;
-            font-weight: 300;
-        }
-
-        .product-card .price {
-            font-size: 16px;
-            color: #000000;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .whatsapp-btn {
-            display: inline-block;
-            width: 100%;
-            padding: 12px 0;
-            background-color: #111111;
-            color: #ffffff;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease;
-            border: none;
-        }
-
-        .product-card:hover .whatsapp-btn {
-            background-color: #242424;
-        }
-
-        .concept-section {
-            background-color: #fbfcfd;
-            padding: 140px 8%;
-            text-align: center;
-        }
-
-        .concept-section h3 {
-            font-size: 24px;
-            font-weight: 400;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            color: #001a3d;
-        }
-
-        .concept-section p {
-            font-size: 15px;
-            color: #556575;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 2;
-            font-weight: 300;
-        }
-
-        footer {
-            padding: 60px 8%;
-            text-align: center;
-            background-color: #ffffff;
-            border-top: 1px solid #f2f2f2;
-            font-size: 11px;
-            color: #99a5b5;
-            letter-spacing: 2px;
-        }
-
-        @media (max-width: 968px) {
-            .hero-section {
-                flex-direction: column;
-                padding-top: 40px;
-                text-align: center;
-            }
-            .hero-text {
-                margin-bottom: 50px;
-            }
-            .hero-text h2 {
-                font-size: 36px;
-            }
-            .hero-image {
-                justify-content: center;
-                width: 100%;
-            }
-            .hero-text-banner {
-                height: 320px;
-                max-width: 320px;
-            }
-            .catalog-section {
-                padding: 70px 5%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiffStyle Catalog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 40px 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #fff;
+    }
+    .img-wrapper {
+      width: 100%;
+      background: #fcfcfc;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    .img-wrapper img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+    .brand {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #000000;
+      margin-bottom: 4px;
+    }
+    .name {
+      font-size: 14px;
+      color: #555555;
+      margin-bottom: 6px;
+    }
+    .colors {
+      font-size: 12px;
+      color: #999999;
+      margin-bottom: 12px;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .btn-order {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #111111;
+      color: #ffffff;
+      padding: 12px 32px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      width: 80%;
+    }
+    .btn-order:hover {
+      background-color: #25D366; /* Переходит в классический зеленый WhatsApp при наведении */
+    }
+    .btn-order:active {
+      transform: scale(0.98);
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="header-logo-text">RIVO</a>
-    </header>
+<div class="product-grid">
+  <!-- Карточка 1 -->
+  <div class="product-card">
+    <div class="img-wrapper">
+      <img src="hugo_boss_white.jpg" alt="Hugo Boss All-Over Logo T-Shirt">
+    </div>
+    <h3 class="brand">Hugo Boss</h3>
+    <p class="name">All-Over Logo T-Shirt</p>
+    <p class="colors">2 Rəng</p>
+    <p class="price">33 ₼</p>
+    <a href="https://wa.me/994705370001?text=Salam!%20DiffStyle%20saytından%20Hugo%20Boss%20All-Over%20Logo%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+  </div>
 
-    <main>
-        <!-- 1. ƏSAS BANNER -->
-        <section class="hero-section">
-            <div class="hero-text">
-                <h2>Müasir Stil & Premium Keyfiyyət</h2>
-                <p>Yeni kolleksiyamızla üslubunuzu yeniləyin. Hər bir detal sizin rahatlığınız və zərifliyiniz üçün xüsusi olaraq düşünülüb.</p>
-                <a href="#kataloq" class="tilda-btn">Məhsullara Bax</a>
-            </div>
-            <div class="hero-image">
-                <div class="hero-text-banner">
-                    <div class="hero-banner-title">RIVO</div>
-                    <div class="hero-banner-subtitle">STORE</div>
-                </div>
-            </div>
-        </section>
+  <!-- Карточка 2 -->
+  <div class="product-card">
+    <div class="img-wrapper">
+      <img src="hugo_boss_black.jpg" alt="Hugo Boss Cotton Logo Tee">
+    </div>
+    <h3 class="brand">Hugo Boss</h3>
+    <p class="name">Cotton Logo Tee</p>
+    <p class="colors">2 Rəng</p>
+    <p class="price">33 ₼</p>
+    <a href="https://wa.me/994705370001?text=Salam!%20DiffStyle%20saytından%20Hugo%20Boss%20Cotton%20Logo%20Tee%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+  </div>
 
-        <!-- 2. KATALOQ BÖLMƏSİ -->
-        <section class="catalog-section" id="kataloq">
-            <div class="section-title">
-                <h3>Premium T-Shirt Kolleksiyası</h3>
-                <p>Dünya brendlərinin minimalist və lüks dizaynları</p>
-            </div>
-
-            <div class="products-grid">
-                
-                <!-- Məhsul 1: Brunello Cucinelli -->
-                <a href="https://wa.me/994507082548?text=Salam!%20RIVO%20Store%20saytından%20Brunello%20Cucinelli%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://i.postimg.cc/3wMvDcyv/brunello.jpg" alt="Brunello Cucinelli Cotton T-Shirt">
-                    </div>
-                    <h4>Brunello Cucinelli Cotton T-Shirt</h4>
-                    <div class="colors-count">2 Rəng</div>
-                    <div class="price">33 ₼</div>
-                    <div class="whatsapp-btn">Sifariş ver</div>
-                </a>
-
-                <!-- Məhsul 2: Stefano Ricci -->
-                <a href="https://wa.me/994507082548?text=Salam!%20RIVO%20Store%20saytından%20Stefano%20Ricci%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://i.postimg.cc/85z1D04n/stefano.jpg" alt="Stefano Ricci Cotton T-Shirt">
-                    </div>
-                    <h4>Stefano Ricci Cotton T-Shirt</h4>
-                    <div class="colors-count">1 Rəng</div>
-                    <div class="price">33 ₼</div>
-                    <div class="whatsapp-btn">Sifariş ver</div>
-                </a>
-
-                <!-- Məhsul 3: Loro Piana -->
-                <a href="https://wa.me/994507082548?text=Salam!%20RIVO%20Store%20saytından%20Loro%20Piana%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://i.postimg.cc/Pq9P71m6/loro.jpg" alt="Loro Piana Cotton T-Shirt">
-                    </div>
-                    <h4>Loro Piana Cotton T-Shirt</h4>
-                    <div class="colors-count">2 Rəng</div>
-                    <div class="price">33 ₼</div>
-                    <div class="whatsapp-btn">Sifariş ver</div>
-                </a>
-
-                <!-- Məhsul 4: Hugo Boss -->
-                <a href="https://wa.me/994507082548?text=Salam!%20RIVO%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="product-card">
-                    <div class="image-wrapper">
-                        <img src="https://i.postimg.cc/NjCzkjV7/boss1.jpg" alt="Hugo Boss Cotton T-Shirt">
-                    </div>
-                    <h4>Hugo Boss Cotton T-Shirt</h4>
-                    <div class="colors-count">3 Rəng</div>
-                    <div class="price">33 ₼</div>
-                    <div class="whatsapp-btn">Sifariş ver</div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- 3. BRAND KONSEPT BANNER -->
-        <section class="concept-section">
-            <h3>Sakit Lüks və Rahatlıq</h3>
-            <p>Biz müvəqqəti trendlərin arxasınca qaçmırıq. RIVO zamanın sınağından keçən, zərif və premium geyimlər konseptini təklif edir.</p>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
-    </footer>
+  <!-- Карточка 3 -->
+  <div class="product-card">
+    <div class="img-wrapper">
+      <img src="hermes_blue.jpg" alt="Hermes Stitched Horse Tee">
+    </div>
+    <h3 class="brand">Hermes</h3>
+    <p class="name">Stitched Horse Tee</p>
+    <p class="colors">2 Rəng</p>
+    <p class="price">33 ₼</p>
+    <a href="https://wa.me/994705370001?text=Salam!%20DiffStyle%20saytından%20Hermes%20Stitched%20Horse%20Tee%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+  </div>
+</div>
 
 </body>
 </html>
