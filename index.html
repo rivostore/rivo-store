@@ -18,7 +18,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Ультра-минималистичный хедер с тонким шрифтом RIVO */
+    /* Тонкий минималистичный хедер RIVO */
     header {
       padding: 50px 20px 30px 20px;
       text-align: center;
@@ -26,11 +26,11 @@
     }
     .logo {
       font-size: 28px;
-      font-weight: 300; /* Тонкое, премиальное начертание */
-      letter-spacing: 8px; /* Широкий благородный отступ */
+      font-weight: 300;
+      letter-spacing: 8px;
       text-transform: uppercase;
       text-decoration: none;
-      color: #000033; /* Фирменный темно-синий */
+      color: #000033;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
@@ -41,7 +41,7 @@
       padding: 20px 20px 80px 20px;
     }
 
-    /* Чистая сетка товаров в стиле студийного дропа Diff */
+    /* Сетка товаров в стиле DiffStyle */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -55,48 +55,40 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #f7f7f7; /* Ровный студийный фон под вещи */
+      background: #f7f7f7;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
-      border-radius: 0px; /* Строгий квадратный стиль */
+      border-radius: 0px;
       height: 380px;
       overflow: hidden;
     }
     .img-wrapper img {
       max-width: 100%;
       height: 100%;
-      object-fit: cover; /* Чистая посадка без искажений */
+      object-fit: cover;
     }
     .brand {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #000033;
-      margin-bottom: 6px;
-    }
-    .name {
       font-size: 14px;
-      color: #666666;
-      margin-bottom: 6px;
+      font-weight: 400;
+      text-transform: none;
+      color: #000000;
+      margin-bottom: 4px;
     }
     .colors {
-      font-size: 11px;
-      color: #999999;
+      font-size: 12px;
+      color: #777777;
       margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
     .price {
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       color: #000033;
       margin-bottom: 20px;
     }
 
-    /* Аккуратная темно-синяя кнопка */
+    /* Темно-синяя кнопка заказа */
     .btn-order {
       display: inline-flex;
       align-items: center;
@@ -118,7 +110,7 @@
       opacity: 0.9;
     }
     
-    /* Минималистичный футер */
+    /* Футер */
     footer {
       background-color: #ffffff;
       color: #999999;
@@ -132,49 +124,46 @@
 </head>
 <body>
 
-  <!-- ХЕДЕР С ТОНКИМ ШРИФТОМ RIVO -->
+  <!-- ХЕДЕР -->
   <header>
     <a href="#" class="logo">RIVO</a>
   </header>
 
-  <!-- КАТАЛОГ С СТУДИЙНЫМИ ФОТО В СТИЛЕ DIFF -->
+  <!-- КАТАЛОГ С ТОЧНЫМИ НАЗВАНИЯМИ ИЗ DIFFSTYLE -->
   <main class="catalog-container">
     <div class="product-grid">
       
       <!-- Карточка 1 -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&auto=format&fit=crop&q=80" alt="Rivo Premium Hoodie">
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80" alt="Hugo Boss Cotton T-Shirt">
         </div>
-        <h3 class="brand">Rivo Premium</h3>
-        <p class="name">Minimalist Heavy Hoodie</p>
+        <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
-        <p class="price">45 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Minimalist%20Heavy%20Hoodie%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
       <!-- Карточка 2 -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&auto=format&fit=crop&q=80" alt="Rivo Knit Sweatshirt">
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80" alt="Hugo Boss Cotton T-Shirt Black">
         </div>
-        <h3 class="brand">Rivo Luxury</h3>
-        <p class="name">Studio Knit Sweatshirt</p>
-        <p class="colors">3 Rəng</p>
-        <p class="price">40 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Studio%20Knit%20Sweatshirt%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20Black%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
       <!-- Карточка 3 -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&auto=format&fit=crop&q=80" alt="Rivo Zip-Up">
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80" alt="Hermes Cotton T-Shirt">
         </div>
-        <h3 class="brand">Rivo Streetwear</h3>
-        <p class="name">Oversized Zip Hoodie</p>
+        <h3 class="brand">Hermes Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
-        <p class="price">48 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Oversized%20Zip%20Hoodie%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hermes%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
     </div>
