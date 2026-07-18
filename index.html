@@ -10,92 +10,326 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+
+        body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #fff;
-            color: #000;
+            background-color: #ffffff;
+            color: #000000;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 5%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background-color: #ffffff;
+            min-height: 85vh;
+            gap: 5%;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+            color: #000000;
+        }
+
+        .hero-text p {
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .tilda-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 1px solid #000000;
+        }
+
+        .tilda-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* Чистая контурная заглушка вместо фото в баннере */
+        .hero-image-placeholder {
+            width: 100%;
+            max-width: 520px;
+            height: 680px;
+            border: 1px solid #e5e5e5;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888888;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .catalog-section {
+            padding: 120px 8%;
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title h3 {
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 14px;
+            color: #888888;
+            font-weight: 300;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 60px 40px;
+        }
+
+        .product-card {
+            text-align: left;
+            text-decoration: none;
+            color: #000000;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover {
+            opacity: 0.8;
+        }
+
+        /* Контурные рамки для карточек товаров */
+        .image-wrapper-placeholder {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #e5e5e5;
+            background-color: #fafafa;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaaaaa;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .product-card h4 {
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .product-card .price {
+            font-size: 14px;
+            color: #000000;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .product-card .order-badge {
+            font-size: 11px;
+            color: #25D366; /* Зеленый цвет WhatsApp для акцента */
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .concept-section {
+            background-color: #fbfbfb;
+            padding: 140px 8%;
+            text-align: center;
+        }
+
+        .concept-section h3 {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .concept-section p {
+            font-size: 15px;
+            color: #666666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        footer {
+            padding: 60px 8%;
+            text-align: center;
+            background-color: #ffffff;
+            border-top: 1px solid #f2f2f2;
+            font-size: 11px;
+            color: #999999;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 968px) {
+            .hero-section {
+                flex-direction: column;
+                padding-top: 40px;
+                text-align: center;
+            }
+            .hero-text {
+                margin-bottom: 50px;
+            }
+            .hero-text h2 {
+                font-size: 36px;
+            }
+            .hero-image {
+                justify-content: center;
+                width: 100%;
+            }
+            .hero-image-placeholder {
+                height: 450px;
+            }
+            .catalog-section {
+                padding: 70px 5%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header style="display: flex; justify-content: center; align-items: center; padding: 30px 5%; border-bottom: 1px solid #f2f2f2; background-color: #fff; position: sticky; top: 0; z-index: 1000;">
-        <!-- Фиксированная шапка, которая остается сверху при прокрутке -->
-        <div class="logo" style="font-size: 26px; font-weight: 600; letter-spacing: 5px; text-align: center; color: #000;">RIVO</div>
+    <header>
+        <div class="logo">RIVO</div>
     </header>
 
     <main>
         <!-- 1. ƏSAS BANNER -->
-        <section class="hero-section" style="display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background-color: #fafafa; min-height: 75vh;">
-            <div class="hero-text" style="max-width: 550px;">
-                <h2 style="font-size: 52px; font-weight: 400; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px; color: #000;">Müasir Stil & Premium Keyfiyyət</h2>
-                <p style="font-size: 15px; color: #666; margin-bottom: 35px; line-height: 1.6; font-weight: 300;">Yeni kolleksiyamızla üslubunuzu yeniləyin. Hər bir detal sizin rahatlığınız və zərifliyiniz üçün xüsusi olaraq düşünülüb.</p>
-                <a href="#kataloq" style="display: inline-block; padding: 18px 45px; background-color: #000; color: #fff; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; transition: background 0.3s;">Məhsullara Bax</a>
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>Müasir Stil & Premium Keyfiyyət</h2>
+                <p>Yeni kolleksiyamızla üslubunuzu yeniləyin. Hər bir detal sizin rahatlığınız və zərifliyiniz üçün xüsusi olaraq düşünülüb.</p>
+                <a href="#kataloq" class="tilda-btn">Məhsullara Bax</a>
             </div>
-            <div class="hero-image" style="width: 50%; max-width: 600px;">
-                <!-- Вставили стильное контрастное фото мужского лука -->
-                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=600&auto=format&fit=crop" alt="Premium Suit" style="width: 100%; height: 550px; object-fit: cover; filter: grayscale(20%);">
+            <div class="hero-image">
+                <div class="hero-image-placeholder">RIVO COLLECTION</div>
             </div>
         </section>
 
-        <!-- 2. KATALOQ BÖLMƏSİ (Листаем вниз и видим товары) -->
-        <section id="kataloq" style="padding: 100px 5%; background-color: #fff;">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h3 style="font-size: 32px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px;">Yeni Kolleksiya</h3>
-                <p style="font-size: 14px; color: #888; font-weight: 300;">Premium parçalardan hazırlanan minimalist dizaynlar</p>
+        <!-- 2. KATALOQ BÖLMƏSİ -->
+        <section class="catalog-section" id="kataloq">
+            <div class="section-title">
+                <h3>Yeni Kolleksiya</h3>
+                <p>Premium parçalardan hazırlanan minimalist dizaynlar</p>
             </div>
 
-            <!-- Сетка товаров (4 вещи в ряд) -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px 30px;">
+            <div class="products-grid">
                 
                 <!-- Məhsul 1 -->
-                <div style="text-align: center;">
-                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
-                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=500&auto=format&fit=crop" alt="T-Shirt" style="width: 100%; height: 380px; object-fit: cover; transition: transform 0.5s;">
-                    </div>
-                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Premium Pambıq Köynək</h4>
-                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">55.00 AZN</p>
-                </div>
+                <a href="https://wa.me/994507523828?text=Salam,%20Premium%20Pambıq%20Köynək%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                    <div class="image-wrapper-placeholder">RIVO PRODUCT 01</div>
+                    <h4>Premium Pambıq Köynək</h4>
+                    <div class="price">55.00 AZN</div>
+                    <div class="order-badge">WhatsApp ilə sifariş et</div>
+                </a>
 
                 <!-- Məhsul 2 -->
-                <div style="text-align: center;">
-                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
-                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=500&auto=format&fit=crop" alt="Shirt" style="width: 100%; height: 380px; object-fit: cover;">
-                    </div>
-                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Klassik Premium Köynək</h4>
-                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">85.00 AZN</p>
-                </div>
+                <a href="https://wa.me/994507523828?text=Salam,%20Klassik%20Premium%20Köynək%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                    <div class="image-wrapper-placeholder">RIVO PRODUCT 02</div>
+                    <h4>Klassik Premium Köynək</h4>
+                    <div class="price">85.00 AZN</div>
+                    <div class="order-badge">WhatsApp ilə sifariş et</div>
+                </a>
 
                 <!-- Məhsul 3 -->
-                <div style="text-align: center;">
-                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
-                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=500&auto=format&fit=crop" alt="Trousers" style="width: 100%; height: 380px; object-fit: cover;">
-                    </div>
-                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Minimalist Şalvar</h4>
-                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">120.00 AZN</p>
-                </div>
+                <a href="https://wa.me/994507523828?text=Salam,%20Minimalist%20Şalvar%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                    <div class="image-wrapper-placeholder">RIVO PRODUCT 03</div>
+                    <h4>Minimalist Şalvar</h4>
+                    <div class="price">120.00 AZN</div>
+                    <div class="order-badge">WhatsApp ilə sifariş et</div>
+                </a>
 
                 <!-- Məhsul 4 -->
-                <div style="text-align: center;">
-                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
-                        <img src="https://images.unsplash.com/photo-1598411037711-08d3000b4f30?q=80&w=500&auto=format&fit=crop" alt="Blazer" style="width: 100%; height: 380px; object-fit: cover;">
-                    </div>
-                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Premium Pencək (Blazer)</h4>
-                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">240.00 AZN</p>
-                </div>
+                <a href="https://wa.me/994507523828?text=Salam,%20Premium%20Pencək%20sifariş%20etmək%20istəyirəm." target="_blank" class="product-card">
+                    <div class="image-wrapper-placeholder">RIVO PRODUCT 04</div>
+                    <h4>Premium Pencək (Blazer)</h4>
+                    <div class="price">240.00 AZN</div>
+                    <div class="order-badge">WhatsApp ilə sifariş et</div>
+                </a>
 
             </div>
         </section>
 
-        <!-- 3. BRAND KONSEPT BANNER (Ещё ниже для атмосферы) -->
-        <section style="background-color: #000; color: #fff; padding: 100px 5%; text-align: center;">
-            <h3 style="font-size: 28px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px;">Sakit Lüks və Rahatlıq</h3>
-            <p style="font-size: 15px; color: #aaa; max-width: 600px; margin: 0 auto; line-height: 1.8; font-weight: 300;">Biz trendlərin arxasınca qaçmırıq. RIVO zamanın sınağından keçən premium geyimlər təklif edir.</p>
+        <!-- 3. BRAND KONSEPT BANNER -->
+        <section class="concept-section">
+            <h3>Sakit Lüks və Rahatlıq</h3>
+            <p>Biz müvəqqəti trendlərin arxasınca qaçmırıq. RIVO zamanın sınağından keçən, zərif və premium geyimlər konseptini təklif edir.</p>
         </section>
     </main>
 
-    <footer style="padding: 40px 5%; text-align: center; background-color: #fafafa; border-top: 1px solid #f2f2f2; font-size: 12px; color: #888; letter-spacing: 1px;">
+    <footer>
         &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
     </footer>
 
