@@ -55,7 +55,7 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #f7f7f7;
+      background: #ffffff; /* Белый фон под вырезанные футболки */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -65,9 +65,9 @@
       overflow: hidden;
     }
     .img-wrapper img {
-      max-width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain; /* Чтобы вещи не растягивались и были как на ладони */
     }
     .brand {
       font-size: 14px;
@@ -129,25 +129,25 @@
     <a href="#" class="logo">RIVO</a>
   </header>
 
-  <!-- КАТАЛОГ С ТОЧНЫМИ НАЗВАНИЯМИ ИЗ DIFFSTYLE -->
+  <!-- КАТАЛОГ С ЧИСТЫМИ ФОТО ВЕЩЕЙ -->
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- Карточка 1 -->
+      <!-- Карточка 1: Белая Hugo Boss с принтом -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80" alt="Hugo Boss Cotton T-Shirt">
+          <img src="https://assets.gq.ru/photos/6082a93ce4e39b7a42168fd1/master/w_960%2cc_limit/1.jpg" alt="Hugo Boss Cotton T-Shirt White">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
         <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20White%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Карточка 2 -->
+      <!-- Карточка 2: Черная Hugo Boss с маленьким лого -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80" alt="Hugo Boss Cotton T-Shirt Black">
+          <img src="https://images.hugoboss.com/is/image/boss/hbeu50468364_001_220" alt="Hugo Boss Cotton T-Shirt Black">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -155,10 +155,10 @@
         <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20Black%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Карточка 3 -->
+      <!-- Карточка 3: Синяя Hermes с лошадью -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80" alt="Hermes Cotton T-Shirt">
+          <img src="https://assets.hermes.com/is/image/hermesproduct/h167590ha01_front" alt="Hermes Cotton T-Shirt">
         </div>
         <h3 class="brand">Hermes Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
