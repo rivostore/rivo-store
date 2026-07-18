@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
-    /* Глобальный сброс стилей */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -18,7 +17,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Тонкий минималистичный хедер RIVO */
     header {
       padding: 50px 20px 30px 20px;
       text-align: center;
@@ -34,14 +32,12 @@
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
-    /* Контейнер каталога */
     .catalog-container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px 20px 80px 20px;
     }
 
-    /* Сетка товаров в стиле Diff */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -55,7 +51,7 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #f7f7f7; /* Мягкий студийный фон */
+      background: #f7f7f7;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -64,8 +60,8 @@
       overflow: hidden;
     }
     .img-wrapper img {
-      max-width: 75%;
-      max-height: 75%;
+      max-width: 85%;
+      max-height: 85%;
       object-fit: contain;
     }
     .brand {
@@ -86,7 +82,6 @@
       margin-bottom: 20px;
     }
 
-    /* Аккуратная темно-синяя кнопка заказа */
     .btn-order {
       display: inline-flex;
       align-items: center;
@@ -107,7 +102,6 @@
       background-color: #000055;
     }
     
-    /* Футер */
     footer {
       background-color: #ffffff;
       color: #999999;
@@ -121,53 +115,97 @@
 </head>
 <body>
 
-  <!-- ХЕДЕР RIVO -->
   <header>
     <a href="#" class="logo">RIVO</a>
   </header>
 
-  <!-- КАТАЛОГ С ВСТРОЕННЫМИ КАРТИНКАМИ ФУТБОЛОК -->
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- Карточка 1: Белая футболка -->
+      <!-- 1. Hugo Boss White -->
       <div class="product-card">
-        <div class="img-wrapper">
-          <!-- Картинка зашита прямо в код через SVG Base64 -->
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20,20 L30,10 L40,18 L50,12 L60,18 L70,10 L80,20 L85,55 L75,58 L72,85 L28,85 L25,58 L15,55 Z' fill='%23ffffff' stroke='%23e0e0e0' stroke-width='1.5'/></svg>" alt="Hugo Boss Cotton T-Shirt White">
-        </div>
+        <div class="img-wrapper"><img src="boss_white.jpg" alt="Hugo Boss White"></div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
         <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20White%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Карточка 2: Черная футболка -->
+      <!-- 2. Hugo Boss Black -->
       <div class="product-card">
-        <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20,20 L30,10 L40,18 L50,12 L60,18 L70,10 L80,20 L85,55 L75,58 L72,85 L28,85 L25,58 L15,55 Z' fill='%231a1a2e' stroke='%230f0f1b' stroke-width='1.5'/></svg>" alt="Hugo Boss Cotton T-Shirt Black">
-        </div>
+        <div class="img-wrapper"><img src="boss_black.jpg" alt="Hugo Boss Black"></div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
         <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20Black%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Карточка 3: Синяя футболка -->
+      <!-- 3. Hermes -->
       <div class="product-card">
-        <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20,20 L30,10 L40,18 L50,12 L60,18 L70,10 L80,20 L85,55 L75,58 L72,85 L28,85 L25,58 L15,55 Z' fill='%23000033' stroke='%23000022' stroke-width='1.5'/></svg>" alt="Hermes Cotton T-Shirt">
-        </div>
+        <div class="img-wrapper"><img src="hermes.jpg" alt="Hermes T-Shirt"></div>
         <h3 class="brand">Hermes Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
         <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hermes%20Cotton%20T-Shirt%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <a href="https://wa.me/994507082548?text=Salam!%20Hermes%20T-Shirt%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 4. Armani White -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="armani_white.jpg" alt="Armani White"></div>
+        <h3 class="brand">Giorgio Armani T-Shirt</h3>
+        <p class="colors">3 Rəng</p>
+        <p class="price">35 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20White%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 5. Armani Black -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="armani_black.jpg" alt="Armani Black"></div>
+        <h3 class="brand">Giorgio Armani T-Shirt</h3>
+        <p class="colors">3 Rəng</p>
+        <p class="price">35 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20Black%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 6. Prada -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="prada.jpg" alt="Prada T-Shirt"></div>
+        <h3 class="brand">Prada Milano T-Shirt</h3>
+        <p class="colors">1 Rəng</p>
+        <p class="price">38 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Prada%20T-Shirt%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 7. Ralph Lauren -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="ralph.jpg" alt="Ralph Lauren"></div>
+        <h3 class="brand">Ralph Lauren Polo T-Shirt</h3>
+        <p class="colors">4 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Ralph%20Lauren%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 8. Calvin Klein -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="ck.jpg" alt="Calvin Klein"></div>
+        <h3 class="brand">Calvin Klein Jeans T-Shirt</h3>
+        <p class="colors">2 Rəng</p>
+        <p class="price">30 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Calvin%20Klein%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- 9. Lacoste -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="lacoste.jpg" alt="Lacoste"></div>
+        <h3 class="brand">Lacoste Classic T-Shirt</h3>
+        <p class="colors">3 Rəng</p>
+        <p class="price">33 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Lacoste%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
     </div>
   </main>
 
-  <!-- ФУТЕР -->
   <footer>
     &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
   </footer>
