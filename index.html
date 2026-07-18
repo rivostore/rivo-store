@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
-    /* Глобальный сброс стилей */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -41,7 +40,7 @@
       padding: 20px 20px 80px 20px;
     }
 
-    /* Сетка товаров в стиле DiffStyle */
+    /* Сетка товаров */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -55,24 +54,22 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #ffffff; /* Белый фон под вырезанные футболки */
+      background: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
-      border-radius: 0px;
       height: 380px;
       overflow: hidden;
     }
     .img-wrapper img {
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain; /* Чтобы вещи не растягивались и были как на ладони */
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
     .brand {
       font-size: 14px;
       font-weight: 400;
-      text-transform: none;
       color: #000000;
       margin-bottom: 4px;
     }
@@ -95,22 +92,20 @@
       justify-content: center;
       background-color: #000033;
       color: #ffffff;
-      padding: 12px 0;
+      padding: 14px 0;
       text-decoration: none;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1px;
       text-transform: uppercase;
       border-radius: 2px;
-      transition: background-color 0.2s ease, opacity 0.2s ease;
+      transition: background-color 0.2s ease;
       width: 85%;
     }
     .btn-order:hover {
       background-color: #000055;
-      opacity: 0.9;
     }
     
-    /* Футер */
     footer {
       background-color: #ffffff;
       color: #999999;
@@ -124,19 +119,17 @@
 </head>
 <body>
 
-  <!-- ХЕДЕР -->
   <header>
     <a href="#" class="logo">RIVO</a>
   </header>
 
-  <!-- КАТАЛОГ С ЧИСТЫМИ ФОТО ВЕЩЕЙ -->
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- Карточка 1: Белая Hugo Boss с принтом -->
+      <!-- Карточка 1 -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://assets.gq.ru/photos/6082a93ce4e39b7a42168fd1/master/w_960%2cc_limit/1.jpg" alt="Hugo Boss Cotton T-Shirt White">
+          <img src="https://images.hugoboss.com/is/image/boss/hbeu50519107_100_210?wid=500&qlt=80" alt="Hugo Boss Cotton T-Shirt White">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -144,10 +137,10 @@
         <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20White%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Карточка 2: Черная Hugo Boss с маленьким лого -->
+      <!-- Карточка 2 -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://images.hugoboss.com/is/image/boss/hbeu50468364_001_220" alt="Hugo Boss Cotton T-Shirt Black">
+          <img src="https://images.hugoboss.com/is/image/boss/hbeu50519107_001_210?wid=500&qlt=80" alt="Hugo Boss Cotton T-Shirt Black">
         </div>
         <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -155,10 +148,10 @@
         <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20T-Shirt%20Black%20(33%20AZN)%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Карточка 3: Синяя Hermes с лошадью -->
+      <!-- Карточка 3 -->
       <div class="product-card">
         <div class="img-wrapper">
-          <img src="https://assets.hermes.com/is/image/hermesproduct/h167590ha01_front" alt="Hermes Cotton T-Shirt">
+          <img src="https://images.hugoboss.com/is/image/boss/hbeu50474642_410_210?wid=500&qlt=80" alt="Hermes Cotton T-Shirt">
         </div>
         <h3 class="brand">Hermes Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -169,7 +162,6 @@
     </div>
   </main>
 
-  <!-- ФУТЕР -->
   <footer>
     &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
   </footer>
