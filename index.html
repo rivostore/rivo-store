@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RIVO STORE</title>
+  <title>RIVO STORE — PREDIUM KOLEKSİYASI</title>
   <style>
+    /* Глобальный сброс стилей */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,221 +16,153 @@
       background-color: #ffffff;
       color: #000000;
       -webkit-font-smoothing: antialiased;
+      line-height: 1.4;
     }
 
+    /* Тонкий минималистичный хедер RIVO */
     header {
-      padding: 50px 20px 30px 20px;
+      padding: 60px 20px 40px 20px;
       text-align: center;
       background: #ffffff;
+      border-bottom: 1px solid #f5f5f5;
     }
     .logo {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 300;
-      letter-spacing: 8px;
+      letter-spacing: 10px;
       text-transform: uppercase;
       text-decoration: none;
-      color: #000000;
+      color: #1a1a1a;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
+    /* Контейнер каталога */
     .catalog-container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 20px 20px 80px 20px;
+      padding: 60px 20px 100px 20px;
     }
 
+    /* Сетка товаров */
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 60px 40px; /* Отступы между рядами и колонками */
     }
     .product-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      background-color: #ffffff;
     }
     .img-wrapper {
       width: 100%;
-      background: #ffffff;
+      background: #fcfcfc; /* Чистый светлый фон */
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
-      height: 380px;
+      margin-bottom: 24px;
+      height: 420px; /* Увеличенная высота для фото */
       overflow: hidden;
+      border-radius: 4px;
     }
     .img-wrapper img {
-      max-width: 95%;
-      max-height: 95%;
-      object-fit: contain;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain; /* Вещи лежат ровно, как на витрине */
     }
     .brand {
       font-size: 16px;
-      font-weight: 400;
-      color: #111111;
+      font-weight: 500;
+      color: #1a1a1a;
       margin-bottom: 6px;
     }
     .colors {
       font-size: 13px;
-      color: #666666;
-      margin-bottom: 14px;
+      color: #777777;
+      margin-bottom: 16px;
     }
     .price {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
-      color: #000000;
-      margin-bottom: 20px;
+      color: #111111;
+      margin-bottom: 24px;
     }
 
+    /* Темно-синяя кнопка заказа */
     .btn-order {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background-color: #1a1a1a;
+      background-color: #111111;
       color: #ffffff;
-      padding: 12px 24px;
+      padding: 16px 0;
       text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 2px;
       transition: background-color 0.2s ease;
-      width: 85%;
+      width: 90%;
     }
     .btn-order:hover {
       background-color: #333333;
     }
-    .btn-order svg {
-      width: 16px;
-      height: 16px;
-      margin-right: 8px;
-      fill: #25D366;
-    }
     
+    /* Футер */
     footer {
-      background-color: #ffffff;
-      color: #999999;
-      padding: 40px 20px;
+      background-color: #f9f9f9;
+      color: #888888;
+      padding: 60px 20px;
       text-align: center;
-      font-size: 11px;
-      letter-spacing: 1px;
-      border-top: 1px solid #f5f5f5;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      border-top: 1px solid #f0f0f0;
     }
   </style>
 </head>
 <body>
 
+  <!-- ХЕДЕР -->
   <header>
     <a href="#" class="logo">RIVO</a>
   </header>
 
+  <!-- КАТАЛОГ (30 ТОВАРОВ С ВШИТЫМИ ФОТО) -->
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- 1. Brunello Cucinelli Navy -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="https://cdn-images.farfetch-contents.com/19/27/35/67/19273567_42571765_1000.jpg" alt="Brunello Cucinelli">
-        </div>
-        <h3 class="brand">Brunello Cucinelli Cotton T-Shirt</h3>
-        <p class="colors">2 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20Navy%20maraqlanıram." target="_blank" class="btn-order">
-          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.482 8.42-.003 6.597-5.339 11.945-11.89 11.945-1.996-.001-3.959-.505-5.706-1.466L0 24zm6.104-3.52c1.644.975 3.25 1.482 4.954 1.483 5.385.002 9.766-4.38 9.77-9.764.002-2.609-1.012-5.061-2.859-6.91C16.128 3.441 13.682 2.43 11.08 2.429c-5.389 0-9.77 4.38-9.774 9.765-.001 1.766.477 3.491 1.384 5.04L1.701 21.56l4.46-1.17z"/></svg>
-          Sifariş ver
-        </a>
-      </div>
-
-      <!-- 2. Stefano Ricci White -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="https://cdn-images.farfetch-contents.com/18/43/45/21/18434521_40995186_1000.jpg" alt="Stefano Ricci">
-        </div>
-        <h3 class="brand">Stefano Ricci Cotton T-Shirt</h3>
-        <p class="colors">1 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20White%20maraqlanıram." target="_blank" class="btn-order">
-          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.482 8.42-.003 6.597-5.339 11.945-11.89 11.945-1.996-.001-3.959-.505-5.706-1.466L0 24zm6.104-3.52c1.644.975 3.25 1.482 4.954 1.483 5.385.002 9.766-4.38 9.77-9.764.002-2.609-1.012-5.061-2.859-6.91C16.128 3.441 13.682 2.43 11.08 2.429c-5.389 0-9.77 4.38-9.774 9.765-.001 1.766.477 3.491 1.384 5.04L1.701 21.56l4.46-1.17z"/></svg>
-          Sifariş ver
-        </a>
-      </div>
-
-      <!-- 3. Loro Piana Black -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="https://cdn-images.farfetch-contents.com/17/55/33/25/17553325_37076468_1000.jpg" alt="Loro Piana">
-        </div>
-        <h3 class="brand">Loro Piana Cotton T-Shirt</h3>
-        <p class="colors">2 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Loro%20Piana%20Black%20maraqlanıram." target="_blank" class="btn-order">
-          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.482 8.42-.003 6.597-5.339 11.945-11.89 11.945-1.996-.001-3.959-.505-5.706-1.466L0 24zm6.104-3.52c1.644.975 3.25 1.482 4.954 1.483 5.385.002 9.766-4.38 9.77-9.764.002-2.609-1.012-5.061-2.859-6.91C16.128 3.441 13.682 2.43 11.08 2.429c-5.389 0-9.77 4.38-9.774 9.765-.001 1.766.477 3.491 1.384 5.04L1.701 21.56l4.46-1.17z"/></svg>
-          Sifariş ver
-        </a>
-      </div>
-
-      <!-- 4. Hugo Boss White -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="https://img01.ztat.net/article/spp-media-p1/61e88e895bf349c2a25ff0bb76bf2bd8/8be64273b0a747cdbfaad208e330f8ca.jpg?imwidth=762" alt="Hugo Boss White">
-        </div>
-        <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
-        <p class="colors">2 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20White%20maraqlanıram." target="_blank" class="btn-order">
-          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.482 8.42-.003 6.597-5.339 11.945-11.89 11.945-1.996-.001-3.959-.505-5.706-1.466L0 24zm6.104-3.52c1.644.975 3.25 1.482 4.954 1.483 5.385.002 9.766-4.38 9.77-9.764.002-2.609-1.012-5.061-2.859-6.91C16.128 3.441 13.682 2.43 11.08 2.429c-5.389 0-9.77 4.38-9.774 9.765-.001 1.766.477 3.491 1.384 5.04L1.701 21.56l4.46-1.17z"/></svg>
-          Sifariş ver
-        </a>
-      </div>
-
-      <!-- 5. Hugo Boss Black -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="https://img01.ztat.net/article/spp-media-p1/b67a5482cc2b3506bf6fbead89389274/cc69c73322fb486ba9381c8ea41e1b8c.jpg?imwidth=762" alt="Hugo Boss Black">
-        </div>
-        <h3 class="brand">Hugo Boss Cotton T-Shirt</h3>
-        <p class="colors">2 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Hugo%20Boss%20Black%20maraqlanıram." target="_blank" class="btn-order">
-          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.482 8.42-.003 6.597-5.339 11.945-11.89 11.945-1.996-.001-3.959-.505-5.706-1.466L0 24zm6.104-3.52c1.644.975 3.25 1.482 4.954 1.483 5.385.002 9.766-4.38 9.77-9.764.002-2.609-1.012-5.061-2.859-6.91C16.128 3.441 13.682 2.43 11.08 2.429c-5.389 0-9.77 4.38-9.774 9.765-.001 1.766.477 3.491 1.384 5.04L1.701 21.56l4.46-1.17z"/></svg>
-          Sifariş ver
-        </a>
-      </div>
-
-      <!-- 6. Giorgio Armani White -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="https://cdn-images.farfetch-contents.com/22/47/40/32/22474032_52445100_1000.jpg" alt="Giorgio Armani White">
-        </div>
-        <h3 class="brand">Giorgio Armani T-Shirt</h3>
-        <p class="colors">3 Rəng</p>
-        <p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20White%20maraqlanıram." target="_blank" class="btn-order">
-          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.482 8.42-.003 6.597-5.339 11.945-11.89 11.945-1.996-.001-3.959-.505-5.706-1.466L0 24zm6.104-3.52c1.644.975 3.25 1.482 4.954 1.483 5.385.002 9.766-4.38 9.77-9.764.002-2.609-1.012-5.061-2.859-6.91C16.128 3.441 13.682 2.43 11.08 2.429c-5.389 0-9.77 4.38-9.774 9.765-.001 1.766.477 3.491 1.384 5.04L1.701 21.56l4.46-1.17z"/></svg>
-          Sifariş ver
-        </a>
-      </div>
-
-      <!-- 7. Giorgio Armani Black -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="https://cdn-images.farfetch-contents.com/22/47/40/31/22474031_52443906_1000.jpg" alt="Giorgio Armani Black">
-        </div>
-        <h3 class="brand">Giorgio Armani T-Shirt</h3>
-        <p class="colors">3 Rəng</p>
-        <p class="price">35 ₼</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Armani%20Black%20maraqlanıram." target="_blank" class="btn-order">
-          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.482 8.42-.003 6.597-5.339 11.945-11.89 11.945-1.996-.001-3.959-.505-5.706-1.466L0 24zm6.104-3.52c1.644.975 3.25 1.482 4.954 1.483 5.385.002 9.766-4.38 9.77-9.764.002-2.609-1.012-5.061-2.859-6.91C16.128 3.441 13.682 2.43 11.08 2.429c-5.389 0-9.77 4.38-9.774 9.765-.001 1.766.477 3.491 1.384 5.04L1.701 21.56l4.46-1.17z"/></svg>
-          Sifariş ver
-        </a>
-      </div>
-
-    </div>
-  </main>
-
-  <footer>
-    &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
-  </footer>
-
-</body>
-</html>
+      <!-- ТОВАРЫ 1-30 -->
+      <script>
+        const items = [
+          { brand: "Brunello Cucinelli", colors: "3 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Stefano Ricci", colors: "1 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Loro Piana", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Hugo Boss", colors: "4 Rəng", price: "45 ₼", src: "https://img01.ztat.net/article/spp-media-p1/61e88e895bf349c2a25ff0bb76bf2bd8/8be64273b0a747cdbfaad208e330f8ca.jpg?imwidth=762" },
+          { brand: "Brunello Cucinelli", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Stefano Ricci", colors: "3 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Loro Piana", colors: "1 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Hugo Boss", colors: "5 Rəng", price: "45 ₼", src: "https://img01.ztat.net/article/spp-media-p1/b67a5482cc2b3506bf6fbead89389274/cc69c73322fb486ba9381c8ea41e1b8c.jpg?imwidth=762" },
+          { brand: "Brunello Cucinelli", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1588361861043-f9b4043ead1a?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Stefano Ricci", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1592745837008-053b2c8e10fc?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Loro Piana", colors: "3 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Hugo Boss", colors: "4 Rəng", price: "45 ₼", src: "https://cdn-images.farfetch-contents.com/19/27/35/67/19273567_42571765_1000.jpg" },
+          { brand: "Brunello Cucinelli", colors: "1 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1590736967072-5bf17ed0677b?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Stefano Ricci", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Loro Piana", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1601345173396-02e84421d9b4?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Hugo Boss", colors: "3 Rəng", price: "45 ₼", src: "https://img01.ztat.net/article/spp-media-p1/48937a4df4b742409831f47286f19303/446c94e9d84f468ab24c730ea95e3307.jpg?imwidth=762" },
+          { brand: "Brunello Cucinelli", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1613213819747-03c62c7b6210?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Stefano Ricci", colors: "1 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Loro Piana", colors: "4 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1611930022073-b7a434a1c1d0?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Hugo Boss", colors: "2 Rəng", price: "45 ₼", src: "https://img01.ztat.net/article/spp-media-p1/989a5e5a24eb37a89fb07d390df7ae9f/24050c9b13e94e84a88c342a763e5d4c.jpg?imwidth=762" },
+          { brand: "Brunello Cucinelli", colors: "3 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1618354691688-c9ac3853110a?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Stefano Ricci", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1574717161916-068f58c6c4ae?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Loro Piana", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1593179357114-a32f016d8044?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Hugo Boss", colors: "4 Rəng", price: "45 ₼", src: "https://img01.ztat.net/article/spp-media-p1/143827e696b04613996d86f0e9d7b6d0/f28679eb791a434c9701a2f0b0959013.jpg?imwidth=762" },
+          { brand: "Brunello Cucinelli", colors: "2 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1613213819747-03c62c7b6210?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Stefano Ricci", colors: "1 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1612902335174-781799e3507b?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Loro Piana", colors: "3 Rəng", price: "55 ₼", src: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=600&auto=format&fit=crop&q=80" },
+          { brand: "Hugo Boss", colors: "5 Rəng", price: "45 ₼", src: "https://img01.ztat.net/article/spp-media-p1/293027c22e6b4168b60b6c3ee7d4e51d/a816ab8b31c54621a4103e9b7c63ef54.jpg?imwidth=762" },
+          { brand: "Brunello Cucinelli", colors: "2 Rəng", price: "55 ₼", src: "
