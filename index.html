@@ -19,38 +19,39 @@
 
     /* УЛЬТРА-МИНИМАЛИСТИЧНЫЙ ЛОГОТИП */
     header {
-      padding: 80px 20px 60px 20px;
+      padding: 90px 20px 70px 20px;
       text-align: center;
       background: #ffffff;
     }
     .logo {
-      font-size: 24px;
-      font-weight: 200; /* Максимально тонкий */
-      letter-spacing: 16px; /* Элегантный большой отступ */
+      font-size: 22px;
+      font-weight: 200; /* Очень тонкий, изящный шрифт */
+      letter-spacing: 18px; /* Стильный большой отступ между буквами */
       text-transform: uppercase;
       text-decoration: none;
       color: #000000;
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      opacity: 0.9;
+      display: inline-block;
+      padding-left: 18px; /* Компенсация отступа последней буквы для идеального центра */
     }
 
     /* Сетка каталога (ровно 3 товара в ряд) */
     .catalog-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px 100px 20px;
+      padding: 0 20px 120px 20px;
     }
     .product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 40px;
     }
 
-    /* Адаптив под мобильные устройства */
+    /* Мобильная адаптация */
     @media (max-width: 768px) {
       .product-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 60px;
       }
     }
 
@@ -62,38 +63,40 @@
     }
     .img-wrapper {
       width: 100%;
-      background: #fcfcfc; /* Мягкий минималистичный фон для карточки */
+      background: #ffffff; 
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
-      height: 400px;
+      margin-bottom: 25px;
+      height: 420px;
       overflow: hidden;
-      border-radius: 4px;
     }
-    .img-wrapper svg {
-      width: 70%;
-      height: 70%;
+    .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Фотографии заполнят блок без полей, как в дорогих лукбуках */
+      border-radius: 2px;
     }
     .brand {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 400;
       color: #000000;
       margin-bottom: 6px;
+      letter-spacing: 0.5px;
     }
     .colors {
       font-size: 12px;
-      color: #888888;
-      margin-bottom: 12px;
+      color: #777777;
+      margin-bottom: 14px;
     }
     .price {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: #000000;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
-    /* Стильная монохромная кнопка */
+    /* Лаконичная премиум кнопка */
     .btn-order {
       display: inline-flex;
       align-items: center;
@@ -102,16 +105,17 @@
       color: #ffffff;
       padding: 14px 0;
       text-decoration: none;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       width: 100%;
-      transition: opacity 0.2s ease;
-      border-radius: 2px;
+      transition: background-color 0.2s ease, opacity 0.2s ease;
+      border-radius: 0px;
     }
     .btn-order:hover {
-      opacity: 0.8;
+      background-color: #111111;
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -124,13 +128,10 @@
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- 1. Brunello Cucinelli -->
+      <!-- 1. Brunello Cucinelli (Navy) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <!-- Автономный силуэт футболки (Navy) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 9a1 1 0 0 1-.7-1.7l3-3a1 1 0 0 1 1.4 0l1.8 1.8a2 2 0 0 0 2.8 0L14.1 4.3a1 1 0 0 1 1.4 0l3 3A1 1 0 0 1 17.8 9H16v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9H4z"/>
-          </svg>
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Brunello Cucinelli">
         </div>
         <h3 class="brand">Brunello Cucinelli Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
@@ -138,13 +139,10 @@
         <a href="https://wa.me/994507082548?text=Salam!%20Brunello%20Cucinelli%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- 2. Stefano Ricci -->
+      <!-- 2. Stefano Ricci (White) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <!-- Автономный силуэт футболки (White/Gray) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 9a1 1 0 0 1-.7-1.7l3-3a1 1 0 0 1 1.4 0l1.8 1.8a2 2 0 0 0 2.8 0L14.1 4.3a1 1 0 0 1 1.4 0l3 3A1 1 0 0 1 17.8 9H16v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9H4z"/>
-          </svg>
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" alt="Stefano Ricci">
         </div>
         <h3 class="brand">Stefano Ricci Cotton T-Shirt</h3>
         <p class="colors">1 Rəng</p>
@@ -152,13 +150,10 @@
         <a href="https://wa.me/994507082548?text=Salam!%20Stefano%20Ricci%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- 3. Loro Piana -->
+      <!-- 3. Loro Piana (Black) -->
       <div class="product-card">
         <div class="img-wrapper">
-          <!-- Автономный силуэт футболки (Dark) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 9a1 1 0 0 1-.7-1.7l3-3a1 1 0 0 1 1.4 0l1.8 1.8a2 2 0 0 0 2.8 0L14.1 4.3a1 1 0 0 1 1.4 0l3 3A1 1 0 0 1 17.8 9H16v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9H4z"/>
-          </svg>
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Loro Piana">
         </div>
         <h3 class="brand">Loro Piana Cotton T-Shirt</h3>
         <p class="colors">2 Rəng</p>
