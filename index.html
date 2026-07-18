@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIVO Store | Premium Kişi Geyimləri</title>
     
-    <!-- Это то, что вы вставили на 7-ю строку (оставляем!) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,90 +14,90 @@
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             background-color: #fff;
-            color: #0B2345;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            border-bottom: 1px solid #f5f5f5;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #0B2345;
-            font-weight: 400;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #707070;
-        }
-
-        .user-actions {
-            display: flex;
-            gap: 20px;
-        }
-
-        .user-actions a {
-            text-decoration: none;
-            color: #0B2345;
-            font-size: 14px;
+            color: #000;
         }
     </style>
 </head>
 <body>
 
-    <!-- Вот этот контент на азербайджанском теперь будет внутри body -->
-    <header>
-        <div class="logo">RIVO</div>
-        
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Yeni</a></li>
-                <li><a href="#">Kataloq</a></li>
-                <li><a href="#">Endirimlər</a></li>
-                <li><a href="#">Haqqımızda</a></li>
-            </ul>
-        </nav>
-        
-        <div class="user-actions">
-            <a href="#">Axtar</a>
-            <a href="#">Hesabım</a>
-            <a href="#">Səbət (0)</a>
-        </div>
+    <header style="display: flex; justify-content: center; align-items: center; padding: 30px 5%; border-bottom: 1px solid #f2f2f2; background-color: #fff; position: sticky; top: 0; z-index: 1000;">
+        <!-- Фиксированная шапка, которая остается сверху при прокрутке -->
+        <div class="logo" style="font-size: 26px; font-weight: 600; letter-spacing: 5px; text-align: center; color: #000;">RIVO</div>
     </header>
 
     <main>
-        <!-- Əsas Banner (Hero Section) -->
-        <section class="hero-section" style="display: flex; align-items: center; justify-content: space-between; padding: 60px 5%; background-color: #f9f9f9; min-height: 70vh;">
-            <div class="hero-text" style="max-width: 500px;">
-                <h2 style="font-size: 48px; font-weight: 500; margin-bottom: 20px; line-height: 1.2;">Müasir Stil və Premium Keyfiyyət</h2>
-                <p style="font-size: 16px; color: #707070; margin-bottom: 30px; line-height: 1.6;">Yeni kolleksiyamızla üslubunuzu yeniləyin. Hər bir detal sizin rahatlığınız və zərifliyiniz üçün düşünülüb.</p>
-                <a href="#" style="display: inline-block; padding: 15px 35px; background-color: #0B2345; color: #fff; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 1px;">Kolleksiyanı Kəşf Et</a>
+        <!-- 1. ƏSAS BANNER -->
+        <section class="hero-section" style="display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background-color: #fafafa; min-height: 75vh;">
+            <div class="hero-text" style="max-width: 550px;">
+                <h2 style="font-size: 52px; font-weight: 400; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px; color: #000;">Müasir Stil & Premium Keyfiyyət</h2>
+                <p style="font-size: 15px; color: #666; margin-bottom: 35px; line-height: 1.6; font-weight: 300;">Yeni kolleksiyamızla üslubunuzu yeniləyin. Hər bir detal sizin rahatlığınız və zərifliyiniz üçün xüsusi olaraq düşünülüb.</p>
+                <a href="#kataloq" style="display: inline-block; padding: 18px 45px; background-color: #000; color: #fff; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; transition: background 0.3s;">Məhsullara Bax</a>
             </div>
             <div class="hero-image" style="width: 50%; max-width: 600px;">
-                <div style="width: 100%; height: 450px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #707070;">Premium Image Placeholder</div>
+                <!-- Вставили стильное контрастное фото мужского лука -->
+                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=600&auto=format&fit=crop" alt="Premium Suit" style="width: 100%; height: 550px; object-fit: cover; filter: grayscale(20%);">
             </div>
         </section>
+
+        <!-- 2. KATALOQ BÖLMƏSİ (Листаем вниз и видим товары) -->
+        <section id="kataloq" style="padding: 100px 5%; background-color: #fff;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h3 style="font-size: 32px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px;">Yeni Kolleksiya</h3>
+                <p style="font-size: 14px; color: #888; font-weight: 300;">Premium parçalardan hazırlanan minimalist dizaynlar</p>
+            </div>
+
+            <!-- Сетка товаров (4 вещи в ряд) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px 30px;">
+                
+                <!-- Məhsul 1 -->
+                <div style="text-align: center;">
+                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=500&auto=format&fit=crop" alt="T-Shirt" style="width: 100%; height: 380px; object-fit: cover; transition: transform 0.5s;">
+                    </div>
+                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Premium Pambıq Köynək</h4>
+                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">55.00 AZN</p>
+                </div>
+
+                <!-- Məhsul 2 -->
+                <div style="text-align: center;">
+                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=500&auto=format&fit=crop" alt="Shirt" style="width: 100%; height: 380px; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Klassik Premium Köynək</h4>
+                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">85.00 AZN</p>
+                </div>
+
+                <!-- Məhsul 3 -->
+                <div style="text-align: center;">
+                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=500&auto=format&fit=crop" alt="Trousers" style="width: 100%; height: 380px; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Minimalist Şalvar</h4>
+                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">120.00 AZN</p>
+                </div>
+
+                <!-- Məhsul 4 -->
+                <div style="text-align: center;">
+                    <div style="overflow: hidden; margin-bottom: 15px; background-color: #f7f7f7;">
+                        <img src="https://images.unsplash.com/photo-1598411037711-08d3000b4f30?q=80&w=500&auto=format&fit=crop" alt="Blazer" style="width: 100%; height: 380px; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 15px; font-weight: 400; margin: 0 0 8px 0; color: #000;">Premium Pencək (Blazer)</h4>
+                    <p style="font-size: 14px; color: #555; font-weight: 500; margin: 0;">240.00 AZN</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. BRAND KONSEPT BANNER (Ещё ниже для атмосферы) -->
+        <section style="background-color: #000; color: #fff; padding: 100px 5%; text-align: center;">
+            <h3 style="font-size: 28px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px;">Sakit Lüks və Rahatlıq</h3>
+            <p style="font-size: 15px; color: #aaa; max-width: 600px; margin: 0 auto; line-height: 1.8; font-weight: 300;">Biz trendlərin arxasınca qaçmırıq. RIVO zamanın sınağından keçən premium geyimlər təklif edir.</p>
+        </section>
     </main>
+
+    <footer style="padding: 40px 5%; text-align: center; background-color: #fafafa; border-top: 1px solid #f2f2f2; font-size: 12px; color: #888; letter-spacing: 1px;">
+        &copy; 2026 RIVO STORE. BÜTÜN HÜQUQLAR QORUNUR.
+    </footer>
 
 </body>
 </html>
