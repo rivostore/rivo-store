@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RIVO STORE — Full Catalog</title>
+  <title>RIVO STORE — Premium Catalog</title>
   <style>
-    /* Глобальные стили (Белый фон) */
+    /* Глобальные стили */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -17,74 +17,74 @@
       color: #000000;
     }
 
-    /* Чистый хедер — строго только логотип RIVO */
+    /* Фирменный минималистичный темно-синий хедер */
     header {
       padding: 40px 20px;
       text-align: center;
       border-bottom: 1px solid #f5f5f5;
     }
     .logo {
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 900;
       letter-spacing: 6px;
       text-transform: uppercase;
       text-decoration: none;
-      color: #000033; /* Темно-синий бренд-цвет */
-      font-family: Arial, sans-serif;
+      color: #000033; /* Тот самый темно-синий RIVO */
+      font-family: 'Arial Black', Gadget, sans-serif;
     }
 
-    /* Основной контейнер всего каталога */
+    /* Контейнер каталога */
     .catalog-container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px 80px 20px;
     }
 
-    /* Разделы каталога для удобства */
+    /* Заголовок категории */
     .section-title {
       font-size: 18px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: #000033;
-      margin: 40px 0 20px 0;
-      padding-left: 5px;
-      border-left: 3px solid #000033;
+      margin: 20px 0 30px 0;
+      padding-left: 10px;
+      border-left: 4px solid #000033;
     }
 
-    /* Сетка товаров */
+    /* Сетка товаров ровно в ряд как в Diff */
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
     }
     .product-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      background: #fff;
-      padding-bottom: 15px;
     }
     .img-wrapper {
       width: 100%;
-      background: #fcfcfc; /* Фон под вещи */
-      padding: 40px 20px;
+      background: #fcfcfc;
+      padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-radius: 4px;
-      position: relative;
+      border: 1px solid #f7f7f7;
+      height: 360px; /* Высота под вертикальный формат карточек */
+      overflow: hidden;
     }
     .img-wrapper img {
       max-width: 100%;
-      height: 220px;
-      object-fit: contain;
-      mix-blend-mode: multiply;
+      height: 100%;
+      object-fit: cover; /* Красивая посадка фото без искажений */
+      border-radius: 2px;
     }
     .brand {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -93,24 +93,22 @@
     }
     .name {
       font-size: 14px;
-      color: #555;
+      color: #555555;
       margin-bottom: 6px;
-      height: 36px; /* Фиксированная высота, чтоб кнопки не прыгали */
-      overflow: hidden;
     }
     .colors {
-      font-size: 11px;
-      color: #999;
-      margin-bottom: 10px;
+      font-size: 12px;
+      color: #999999;
+      margin-bottom: 12px;
     }
     .price {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       color: #000033;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    /* Кнопка заказа: Темно-синий фон, белый текст */
+    /* Фирменная темно-синяя кнопка */
     .btn-order {
       display: inline-flex;
       align-items: center;
@@ -123,14 +121,17 @@
       font-weight: 600;
       letter-spacing: 0.5px;
       border-radius: 4px;
-      transition: background-color 0.2s ease;
-      width: 90%;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      width: 85%;
     }
     .btn-order:hover {
-      background-color: #000066; /* Выделение при наведении */
+      background-color: #000055;
+    }
+    .btn-order:active {
+      transform: scale(0.98);
     }
     
-    /* Темно-синий футер */
+    /* Минималистичный футер */
     footer {
       background-color: #000033;
       color: #ffffff;
@@ -143,103 +144,54 @@
 </head>
 <body>
 
-  <!-- ХЕДЕР -->
+  <!-- МИНИМАЛИСТИЧНЫЙ ХЕДЕР -->
   <header>
     <a href="#" class="logo">RIVO</a>
   </header>
 
+  <!-- КАТАЛОГ С ВЕРТИКАЛЬНЫМИ ФОТО КОФТ -->
   <main class="catalog-container">
+    <div class="section-title">Koftalar</div>
     
-    <!-- КАТЕГОРИЯ: KOFTALAR / HOODIES / SWEATSHIRTS -->
-    <div class="section-title">Koftalar & Üst Geyimləri</div>
     <div class="product-grid">
       
-      <!-- Товар 1 -->
+      <!-- Карточка 1 -->
       <div class="product-card">
-        <div class="img-wrapper"><img src="hugo_hoodie_black.jpg" alt="Hugo Boss Hoodie"></div>
-        <h3 class="brand">Hugo Boss</h3>
-        <p class="name">Essential Oversized Hoodie</p>
-        <p class="colors">3 Rəng</p>
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&auto=format&fit=crop&q=80" alt="Rivo Premium Hoodie">
+        </div>
+        <h3 class="brand">Rivo Premium</h3>
+        <p class="name">Minimalist Blank Hoodie</p>
+        <p class="colors">2 Rəng</p>
         <p class="price">45 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Essential%20Hoodie%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Minimalist%20Blank%20Hoodie%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Товар 2 -->
+      <!-- Карточка 2 -->
       <div class="product-card">
-        <div class="img-wrapper"><img src="nike_sweatshirt.jpg" alt="Nike Sweatshirt"></div>
-        <h3 class="brand">Nike</h3>
-        <p class="name">Vintage Centre Logo Sweatshirt</p>
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=500&auto=format&fit=crop&q=80" alt="Rivo Sweatshirt">
+        </div>
+        <h3 class="brand">Rivo Luxury</h3>
+        <p class="name">Heavyweight Knit Sweatshirt</p>
+        <p class="colors">3 Rəng</p>
+        <p class="price">40 ₼</p>
+        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Heavyweight%20Knit%20Sweatshirt%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="product-card">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format&fit=crop&q=80" alt="Rivo Zip Hoodie">
+        </div>
+        <h3 class="brand">Rivo Streetwear</h3>
+        <p class="name">Oversized Zip-Up Hoodie</p>
         <p class="colors">2 Rəng</p>
-        <p class="price">38 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Nike%20Vintage%20Sweatshirt%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- Товар 3 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="stussy_zip.jpg" alt="Stussy Zip Up"></div>
-        <h3 class="brand">Stussy</h3>
-        <p class="name">World Tour Graphic Zip Hoodie</p>
-        <p class="colors">4 Rəng</p>
         <p class="price">48 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Stussy%20Zip%20Hoodie%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <a href="https://wa.me/994507082548?text=Salam!%20Rivo%20Store%20saytından%20Oversized%20Zip-Up%20Hoodie%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- Товар 4 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="carhartt_sweat.jpg" alt="Carhartt Sweatshirt"></div>
-        <h3 class="brand">Carhartt Wip</h3>
-        <p class="name">Chase Neck Zip Sweatshirt</p>
-        <p class="colors">2 Rəng</p>
-        <p class="price">42 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Carhartt%20Chase%20Sweatshirt%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
     </div>
-
-    <!-- КАТЕГОРИЯ: FÜTBOLKALAR -->
-    <div class="section-title">Futbolkalar</div>
-    <div class="product-grid">
-      
-      <!-- Товар 5 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="hugo_boss_white.jpg" alt="Hugo Boss White"></div>
-        <h3 class="brand">Hugo Boss</h3>
-        <p class="name">All-Over Logo T-Shirt</p>
-        <p class="colors">2 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20All-Over%20Logo%20T-Shirt%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- Товар 6 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="hugo_boss_black.jpg" alt="Hugo Boss Black"></div>
-        <h3 class="brand">Hugo Boss</h3>
-        <p class="name">Cotton Logo Tee</p>
-        <p class="colors">2 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Hugo%20Boss%20Cotton%20Logo%20Tee%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- Товар 7 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="hermes_blue.jpg" alt="Hermes Blue"></div>
-        <h3 class="brand">Hermes</h3>
-        <p class="name">Stitched Horse Tee</p>
-        <p class="colors">2 Rəng</p>
-        <p class="price">33 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Hermes%20Stitched%20Horse%20Tee%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- Товар 8 -->
-      <div class="product-card">
-        <div class="img-wrapper"><img src="dior_tee.jpg" alt="Dior Tee"></div>
-        <h3 class="brand">Christian Dior</h3>
-        <p class="name">Relaxed Fit Oblique Tee</p>
-        <p class="colors">1 Rəng</p>
-        <p class="price">35 ₼</p>
-        <a href="https://wa.me/994705370001?text=Salam!%20Rivo%20Store%20saytından%20Dior%20Oblique%20Tee%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-    </div>
-
   </main>
 
   <!-- ФУТЕР -->
