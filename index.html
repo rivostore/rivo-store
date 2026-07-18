@@ -5,127 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* УЛЬТРА-МИНИМАЛИСТИЧНЫЙ ЛОГОТИП */
-    header {
-      padding: 80px 20px 50px 20px;
-      text-align: center;
-      background: #ffffff;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: 200;
-      letter-spacing: 20px;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #000000;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      display: inline-block;
-      padding-left: 20px;
-    }
-
-    /* Сетка каталога под 4 товара */
-    .catalog-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px 100px 20px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
-
-    @media (max-width: 1024px) {
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-      }
-    }
-    @media (max-width: 576px) {
-      .product-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
-    }
-
-    .product-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .img-wrapper {
-      width: 100%;
-      background: #ffffff; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-      height: 350px;
-      overflow: hidden;
-    }
-    .img-wrapper img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .brand {
-      font-size: 15px;
-      font-weight: 500;
-      color: #000000;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .model-name {
-      font-size: 13px;
-      color: #555555;
-      margin-bottom: 6px;
-    }
-    .colors {
-      font-size: 12px;
-      color: #888888;
-      margin-bottom: 12px;
-    }
-    .price {
-      font-size: 16px;
-      font-weight: 700;
-      color: #000000;
-      margin-bottom: 20px;
-    }
-
-    /* Премиальная кнопка заказа */
-    .btn-order {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #1c1c1c;
-      color: #ffffff;
-      padding: 13px 0;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 500;
-      width: 95%;
-      letter-spacing: 1px;
-      transition: background-color 0.2s ease;
-      border-radius: 4px;
-      text-transform: uppercase;
-    }
-    .btn-order:hover {
-      background-color: #000000;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #ffffff; color: #000000; }
+    header { padding: 80px 20px 50px 20px; text-align: center; }
+    .logo { font-size: 24px; font-weight: 200; letter-spacing: 20px; text-transform: uppercase; text-decoration: none; color: #000000; }
+    .catalog-container { max-width: 1000px; margin: 0 auto; padding: 0 20px 100px 20px; }
+    .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; }
+    @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+    .product-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .img-wrapper { width: 100%; height: 400px; display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+    .img-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .brand { font-size: 14px; text-transform: uppercase; margin-bottom: 5px; }
+    .model-name { font-size: 16px; font-weight: 600; margin-bottom: 15px; }
+    .btn-order { background-color: #000; color: #fff; padding: 12px 30px; text-decoration: none; font-size: 12px; text-transform: uppercase; }
   </style>
 </head>
 <body>
@@ -137,56 +29,39 @@
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- 1. Rolex Datejust (Mint Green) -->
+      <!-- Datejust -->
       <div class="product-card">
-        <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'><rect width='300' height='400' fill='%23ffffff'/><g transform='translate(0,20)'><path d='M110,40 L190,40 L180,100 L120,100 Z M120,280 L180,280 L190,340 L110,340 Z' fill='%23dcdcdc' stroke='%23b8b8b8' stroke-width='2'/><path d='M125,40 L175,40 L168,100 L132,100 Z M132,280 L168,280 L175,340 L125,340 Z' fill='%23f5f5f5'/><rect x='100' y='180' width='100' height='20' rx='3' fill='%23cccccc'/><circle cx='150' cy='190' r='82' fill='%23b8b8b8'/><circle cx='150' cy='190' r='76' fill='%23ffffff'/><circle cx='150' cy='190' r='72' fill='%23e5a93b'/><circle cx='150' cy='190' r='66' fill='%231f4e3d'/><g fill='%23ffffff'><rect x='148' y='132' width='4' height='10' rx='1'/><rect x='148' y='238' width='4' height='10' rx='1'/><rect x='94' y='188' width='10' height='4' rx='1'/><rect x='196' y='188' width='10' height='4' rx='1'/></g><path d='M146,145 L150,138 L154,145 Z' fill='%23e5a93b'/><g stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round'><line x1='150' y1='190' x2='150' y2='155'/><line x1='150' y1='190' x2='185' y2='190'/></g><circle cx='150' cy='190' r='4' fill='%23ffffff'/></g></svg>" alt="Rolex Datejust Mint Green">
-        </div>
+        <div class="img-wrapper"><img src="rolex-datejust.jpg" alt="Rolex Datejust"></div>
         <h3 class="brand">Rolex</h3>
-        <p class="model-name">Datejust 41</p>
-        <p class="colors">Mint Green Dial</p>
-        <p class="price">Qiymət üçün yazın</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rolex%20Datejust%20(Mint%20Green)%20saatı%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <p class="model-name">Datejust</p>
+        <a href="https://wa.me/994507082548" class="btn-order">Sifariş ver</a>
       </div>
 
-      <!-- 2. Rolex Datejust (Classic Blue) -->
+      <!-- Sea-Dweller -->
       <div class="product-card">
-        <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'><rect width='300' height='400' fill='%23ffffff'/><g transform='translate(0,20)'><path d='M110,40 L190,40 L180,100 L120,100 Z M120,280 L180,280 L190,340 L110,340 Z' fill='%23dcdcdc' stroke='%23b8b8b8' stroke-width='2'/><path d='M125,40 L175,40 L168,100 L132,100 Z M132,280 L168,280 L175,340 L125,340 Z' fill='%23f5f5f5'/><rect x='100' y='180' width='100' height='20' rx='3' fill='%23cccccc'/><circle cx='150' cy='190' r='82' fill='%23b8b8b8'/><circle cx='150' cy='190' r='76' fill='%23ffffff'/><circle cx='150' cy='190' r='72' fill='%23cccccc'/><circle cx='150' cy='190' r='66' fill='%230f3b68'/><g fill='%23ffffff'><rect x='148' y='132' width='4' height='10' rx='1'/><rect x='148' y='238' width='4' height='10' rx='1'/><rect x='94' y='188' width='10' height='4' rx='1'/><rect x='196' y='188' width='10' height='4' rx='1'/></g><path d='M146,145 L150,138 L154,145 Z' fill='%23cccccc'/><g stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round'><line x1='150' y1='190' x2='150' y2='150'/><line x1='150' y1='190' x2='180' y2='195'/></g><circle cx='150' cy='190' r='4' fill='%23ffffff'/></g></svg>" alt="Rolex Datejust Blue">
-        </div>
-        <h3 class="brand">Rolex</h3>
-        <p class="model-name">Datejust 36</p>
-        <p class="colors">Blue Diamond Dial</p>
-        <p class="price">Qiymət üçün yazın</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rolex%20Datejust%20(Blue%20Dial)%20saatı%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- 3. Rolex Datejust (Silver Dial) -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'><rect width='300' height='400' fill='%23ffffff'/><g transform='translate(0,20)'><path d='M110,40 L190,40 L180,100 L120,100 Z M120,280 L180,280 L190,340 L110,340 Z' fill='%23dcdcdc' stroke='%23b8b8b8' stroke-width='2'/><path d='M125,40 L175,40 L168,100 L132,100 Z M132,280 L168,280 L175,340 L125,340 Z' fill='%23f5f5f5'/><rect x='100' y='180' width='100' height='20' rx='3' fill='%23cccccc'/><circle cx='150' cy='190' r='82' fill='%23b8b8b8'/><circle cx='150' cy='190' r='76' fill='%23ffffff'/><circle cx='150' cy='190' r='72' fill='%23e5a93b'/><circle cx='150' cy='190' r='66' fill='%23e0e0e0'/><g fill='%23333333'><rect x='148' y='132' width='4' height='10' rx='1'/><rect x='148' y='238' width='4' height='10' rx='1'/><rect x='94' y='188' width='10' height='4' rx='1'/><rect x='196' y='188' width='10' height='4' rx='1'/></g><path d='M146,145 L150,138 L154,145 Z' fill='%23e5a93b'/><g stroke='%23333333' stroke-width='2.5' stroke-linecap='round'><line x1='150' y1='190' x2='155' y2='148'/><line x1='150' y1='190' x2='175' y2='170'/></g><circle cx='150' cy='190' r='4' fill='%23333333'/></g></svg>" alt="Rolex Datejust Silver">
-        </div>
-        <h3 class="brand">Rolex</h3>
-        <p class="model-name">Datejust 41</p>
-        <p class="colors">Silver Jubilee Dial</p>
-        <p class="price">Qiymət üçün yazın</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rolex%20Datejust%20(Silver%20Dial)%20saatı%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
-      </div>
-
-      <!-- 4. Rolex Sea-Dweller (Deep Black) -->
-      <div class="product-card">
-        <div class="img-wrapper">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'><rect width='300' height='400' fill='%23ffffff'/><g transform='translate(0,20)'><path d='M105,40 L195,40 L182,100 L118,100 Z M118,280 L182,280 L195,340 L105,340 Z' fill='%23c0c0c0' stroke='%23999999' stroke-width='2'/><circle cx='150' cy='190' r='85' fill='%23222222'/><circle cx='150' cy='190' r='78' fill='%23111111'/><circle cx='150' cy='190' r='62' fill='%23050505'/><g fill='%23ffffff' stroke='%23ffffff' stroke-width='1'><circle cx='150' cy='138' r='4'/><circle cx='150' cy='242' r='4'/><circle cx='98' cy='190' r='4'/><circle cx='202' cy='190' r='4'/><polygon points='145,114 155,114 150,124' fill='%23ffffff'/></g><g stroke='%23ffffff' stroke-width='3' stroke-linecap='round'><line x1='150' y1='190' x2='150' y2='148'/><line x1='150' y1='190' x2='182' y2='190'/></g><circle cx='150' cy='190' r='4' fill='%23ffffff'/></g></svg>" alt="Rolex Sea-Dweller">
-        </div>
+        <div class="img-wrapper"><img src="rolex-sea-dweller.jpg" alt="Rolex Sea-Dweller"></div>
         <h3 class="brand">Rolex</h3>
         <p class="model-name">Sea-Dweller</p>
-        <p class="colors">Oystersteel Black</p>
-        <p class="price">Qiymət üçün yazın</p>
-        <a href="https://wa.me/994507082548?text=Salam!%20Rolex%20Sea-Dweller%20saatı%20ilə%20maraqlanıram." target="_blank" class="btn-order">Sifariş ver</a>
+        <a href="https://wa.me/994507082548" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- Explorer -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="rolex-explorer.jpg" alt="Rolex Explorer"></div>
+        <h3 class="brand">Rolex</h3>
+        <p class="model-name">Explorer</p>
+        <a href="https://wa.me/994507082548" class="btn-order">Sifariş ver</a>
+      </div>
+
+      <!-- Deepsea -->
+      <div class="product-card">
+        <div class="img-wrapper"><img src="rolex-deepsea.jpg" alt="Rolex Deepsea"></div>
+        <h3 class="brand">Rolex</h3>
+        <p class="model-name">Deepsea</p>
+        <a href="https://wa.me/994507082548" class="btn-order">Sifariş ver</a>
       </div>
 
     </div>
   </main>
-
 </body>
 </html>
