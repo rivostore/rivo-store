@@ -5,155 +5,223 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 15px; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+      background-color: #0a192f; /* Тёмно-синий фон */
+      margin: 0; 
+      padding: 20px 10px; 
+    }
     
-    /* Сетка: 2 колонки с хорошими отступами */
+    .container { max-width: 600px; margin: 0 auto; }
+    
     .product-grid { 
       display: grid; 
       grid-template-columns: repeat(2, 1fr); 
       gap: 15px; 
-      max-width: 600px; 
-      margin: 0 auto;
     }
       
     .product-card { 
-      background: #fff;
-      border-radius: 16px; /* Современные скругления */
+      background: #ffffff; /* Белые карточки */
+      border-radius: 16px; 
       padding: 12px;
       text-decoration: none;
-      color: inherit;
+      color: #333;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-
-    .img-wrapper { width: 100%; height: 150px; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 12px; margin-bottom: 10px; background: #f0f0f0; }
+    .img-wrapper { width: 100%; height: 140px; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 12px; margin-bottom: 10px; background: #f8f9fa; }
     .img-wrapper img { max-width: 90%; max-height: 90%; object-fit: contain; }
     
-    .model-name { font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #1a1a1a; }
-    .price { font-size: 14px; font-weight: 700; color: #000; margin-bottom: 10px; }
+    .model-name { font-size: 12px; font-weight: 600; margin-bottom: 5px; color: #0a192f; }
+    
+    .price-container { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+    .old-price { font-size: 10px; color: #888; text-decoration: line-through; }
+    .new-price { font-size: 13px; font-weight: 800; color: #0a192f; }
     
     .btn-order { 
-      background-color: #000; color: #fff; 
-      padding: 10px; text-align: center;
+      background-color: #0a192f; /* Тёмно-синяя кнопка */
+      color: #fff; 
+      padding: 8px; text-align: center;
       text-transform: uppercase; 
-      font-size: 11px; font-weight: 700;
-      border-radius: 50px; /* Очень овальная кнопка */
+      font-size: 10px; font-weight: 700;
+      border-radius: 50px; 
       margin-top: auto; 
     }
   </style>
 </head>
 <body>
 
-  <div class="product-grid">
-    <!-- Список всех 15 товаров -->
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="gucci-bag.jpg.jpeg.jpeg.png" alt="Gucci"></div>
-      <p class="model-name">Gucci Messenger</p>
-      <div class="price">55 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+  <div class="container">
+    <div class="product-grid">
+      
+      <!-- Товар 1 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="gucci-bag.jpg.jpeg.jpeg.png" alt="Gucci"></div>
+        <p class="model-name">Gucci Messenger</p>
+        <div class="price-container">
+          <span class="old-price">75 AZN</span>
+          <span class="new-price">55 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="lv-bag.jpg.jpeg.jpeg" alt="LV"></div>
-      <p class="model-name">Louis Vuitton</p>
-      <div class="price">60 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 2 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="lv-bag.jpg.jpeg.jpeg" alt="LV"></div>
+        <p class="model-name">Louis Vuitton</p>
+        <div class="price-container">
+          <span class="old-price">80 AZN</span>
+          <span class="new-price">60 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="tommy-black.png.png" alt="Tommy"></div>
-      <p class="model-name">Tommy Black</p>
-      <div class="price">25 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 3 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="tommy-black.png.png" alt="Tommy"></div>
+        <p class="model-name">Tommy Black</p>
+        <div class="price-container">
+          <span class="old-price">35 AZN</span>
+          <span class="new-price">25 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="tommy-navy.png.png" alt="Tommy"></div>
-      <p class="model-name">Tommy Navy</p>
-      <div class="price">25 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 4 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="tommy-navy.png.png" alt="Tommy"></div>
+        <p class="model-name">Tommy Navy</p>
+        <div class="price-container">
+          <span class="old-price">35 AZN</span>
+          <span class="new-price">25 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="armani-black.png.png" alt="Armani"></div>
-      <p class="model-name">Giorgio Armani</p>
-      <div class="price">25 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 5 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="armani-black.png.png" alt="Armani"></div>
+        <p class="model-name">Giorgio Armani</p>
+        <div class="price-container">
+          <span class="old-price">35 AZN</span>
+          <span class="new-price">25 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="kart-1.jpg.jpeg" alt="Card"></div>
-      <p class="model-name">Card Holder 01</p>
-      <div class="price">14.99 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 6 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="kart-1.jpg.jpeg" alt="Card"></div>
+        <p class="model-name">Card Holder 01</p>
+        <div class="price-container">
+          <span class="old-price">20 AZN</span>
+          <span class="new-price">14.99 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="kart-2.jpg.jpeg" alt="Card"></div>
-      <p class="model-name">Card Holder 02</p>
-      <div class="price">14.99 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 7 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="kart-2.jpg.jpeg" alt="Card"></div>
+        <p class="model-name">Card Holder 02</p>
+        <div class="price-container">
+          <span class="old-price">20 AZN</span>
+          <span class="new-price">14.99 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="kart-3.jpg.jpeg" alt="Card"></div>
-      <p class="model-name">Card Holder 03</p>
-      <div class="price">14.99 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 8 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="kart-3.jpg.jpeg" alt="Card"></div>
+        <p class="model-name">Card Holder 03</p>
+        <div class="price-container">
+          <span class="old-price">20 AZN</span>
+          <span class="new-price">14.99 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="goyard-1.jpg.jpeg" alt="Goyard"></div>
-      <p class="model-name">Goyard 01</p>
-      <div class="price">25 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 9 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="goyard-1.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 01</p>
+        <div class="price-container">
+          <span class="old-price">35 AZN</span>
+          <span class="new-price">25 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="goyard-2.jpg.jpeg" alt="Goyard"></div>
-      <p class="model-name">Goyard 02</p>
-      <div class="price">25 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 10 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="goyard-2.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 02</p>
+        <div class="price-container">
+          <span class="old-price">35 AZN</span>
+          <span class="new-price">25 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="goyard-3.jpg.jpeg" alt="Goyard"></div>
-      <p class="model-name">Goyard 03</p>
-      <div class="price">25 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 11 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="goyard-3.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 03</p>
+        <div class="price-container">
+          <span class="old-price">35 AZN</span>
+          <span class="new-price">25 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="goyard-4.jpg.jpeg" alt="Goyard"></div>
-      <p class="model-name">Goyard 04</p>
-      <div class="price">25 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 12 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="goyard-4.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 04</p>
+        <div class="price-container">
+          <span class="old-price">35 AZN</span>
+          <span class="new-price">25 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="sumka-1.jpg.jpeg.jpeg" alt="Bag"></div>
-      <p class="model-name">Bag 01</p>
-      <div class="price">35 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 13 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="sumka-1.jpg.jpeg.jpeg" alt="Bag"></div>
+        <p class="model-name">Bag 01</p>
+        <div class="price-container">
+          <span class="old-price">50 AZN</span>
+          <span class="new-price">35 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="sumka-2.jpg.jpeg.jpeg" alt="Bag"></div>
-      <p class="model-name">Bag 02</p>
-      <div class="price">35 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 14 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="sumka-2.jpg.jpeg.jpeg" alt="Bag"></div>
+        <p class="model-name">Bag 02</p>
+        <div class="price-container">
+          <span class="old-price">50 AZN</span>
+          <span class="new-price">35 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
 
-    <a href="https://wa.me/994507082548" class="product-card">
-      <div class="img-wrapper"><img src="sumka-3.jpg.jpeg.jpeg" alt="Bag"></div>
-      <p class="model-name">Bag 03</p>
-      <div class="price">35 AZN</div>
-      <div class="btn-order">Sifarış</div>
-    </a>
+      <!-- Товар 15 -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="sumka-3.jpg.jpeg.jpeg" alt="Bag"></div>
+        <p class="model-name">Bag 03</p>
+        <div class="price-container">
+          <span class="old-price">50 AZN</span>
+          <span class="new-price">35 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
+
+    </div>
   </div>
 </body>
 </html>
