@@ -8,41 +8,61 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #ffffff; color: #000000; }
     header { padding: 40px 20px 30px 20px; text-align: center; }
-    .catalog-container { max-width: 1000px; margin: 0 auto; padding: 0 20px 100px 20px; }
-    .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; }
-    @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+    .catalog-container { max-width: 1200px; /* Немного увеличили контейнер для 3 колонок */ margin: 0 auto; padding: 0 20px 100px 20px; }
     
+    /* --- ИЗМЕНЕНИЯ ЗДЕСЬ --- */
+    .product-grid { 
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); /* Три колонки на десктопе */
+      gap: 40px; /* Немного уменьшили отступы, чтобы поместилось */
+    }
+    
+    /* Адаптивность для планшетов (2 в ряд) */
+    @media (max-width: 850px) { 
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; } 
+    }
+
+    /* Адаптивность для телефонов (1 в ряд) */
+    @media (max-width: 500px) { 
+      .product-grid { grid-template-columns: 1fr; gap: 40px; } 
+    }
+    /* ------------------------ */
+      
     .product-card { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; color: inherit; cursor: pointer; }
-    .img-wrapper { width: 100%; height: 300px; display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+    
+    /* Уменьшили высоту изображения для компактности в 3 ряда */
+    .img-wrapper { width: 100%; height: 220px; display: flex; justify-content: center; align-items: center; margin-bottom: 15px; }
     .img-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
-    .model-name { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
-    .price-wrapper { margin-bottom: 15px; }
-    .old-price { text-decoration: line-through; color: #666; font-weight: 500; font-size: 15px; margin-right: 10px; }
-    .new-price { font-weight: bold; font-size: 18px; color: #e60000; }
-    .price-fixed { font-weight: bold; font-size: 18px; color: #000000; } /* Новый стиль для обычной цены */
-    .btn-order { background-color: #000; color: #fff; padding: 12px 30px; text-transform: uppercase; border-radius: 2px; font-size: 12px; }
+    
+    .model-name { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+    .price-wrapper { margin-bottom: 12px; font-size: 14px; }
+    .old-price { text-decoration: line-through; color: #666; font-weight: 500; margin-right: 8px; }
+    .new-price { font-weight: bold; color: #e60000; }
+    
+    /* Сделали кнопку чуть меньше */
+    .btn-order { background-color: #000; color: #fff; padding: 10px 25px; text-transform: uppercase; border-radius: 2px; font-size: 11px; font-weight: 600; }
   </style>
 </head>
 <body>
 
   <header>
     <a href="index.html">
-      <img src="logo.png.png" alt="RIVO STORE" style="max-width: 180px; height: auto;">
+      <img src="logo.png.png" alt="RIVO STORE" style="max-width: 160px; height: auto;">
     </a>
   </header>
 
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- Новинка Gucci -->
+      <!-- Новинка Gucci (55 AZN) -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="gucci-bag.jpg.jpeg.jpeg.png" alt="Gucci Bag"></div>
         <p class="model-name">Gucci Messenger Bag</p>
-        <div class="price-wrapper"><span class="price-fixed">55.00 AZN</span></div>
+        <div class="price-wrapper"><span class="new-price">55.00 AZN</span></div>
         <span class="btn-order">SİFARİŞ VER</span>
       </a>
 
-      <!-- Новинка LV -->
+      <!-- Новинка LV (60 AZN) -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="lv-bag.jpg.jpeg.jpeg" alt="LV Bag"></div>
         <p class="model-name">Louis Vuitton Bag</p>
@@ -50,7 +70,7 @@
         <span class="btn-order">SİFARİŞ VER</span>
       </a>
 
-      <!-- Tommy Hilfiger -->
+      <!-- Tommy Hilfiger Black -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="tommy-black.png.png" alt="Tommy Hilfiger Black"></div>
         <p class="model-name">Tommy Hilfiger Black</p>
@@ -58,6 +78,7 @@
         <span class="btn-order">SİFARİŞ VER</span>
       </a>
 
+      <!-- Tommy Hilfiger Navy -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="tommy-navy.png.png" alt="Tommy Hilfiger Navy"></div>
         <p class="model-name">Tommy Hilfiger Navy</p>
@@ -65,6 +86,7 @@
         <span class="btn-order">SİFARİŞ VER</span>
       </a>
 
+      <!-- Armani -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="armani-black.png.png" alt="Giorgio Armani Black"></div>
         <p class="model-name">Giorgio Armani Black</p>
