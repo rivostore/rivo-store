@@ -2,156 +2,158 @@
 <html lang="az">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIVO STORE</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: sans-serif; background-color: #ffffff; color: #000000; padding: 10px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 15px; }
     
-    /* Сетка в 2 колонки */
+    /* Сетка: 2 колонки с хорошими отступами */
     .product-grid { 
-      display: grid !important; 
-      grid-template-columns: repeat(2, 1fr) !important; 
-      gap: 15px !important; 
-      width: 100% !important;
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 15px; 
+      max-width: 600px; 
+      margin: 0 auto;
     }
       
     .product-card { 
-      display: flex !important; 
-      flex-direction: column !important; 
-      align-items: center !important; 
-      text-align: center !important; 
-      text-decoration: none !important; 
-      color: inherit !important; 
-      padding: 5px;
+      background: #fff;
+      border-radius: 16px; /* Современные скругления */
+      padding: 12px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
 
-    .img-wrapper { width: 100%; height: 140px; display: flex; justify-content: center; align-items: center; overflow: hidden; margin-bottom: 8px; }
-    .img-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+
+    .img-wrapper { width: 100%; height: 150px; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 12px; margin-bottom: 10px; background: #f0f0f0; }
+    .img-wrapper img { max-width: 90%; max-height: 90%; object-fit: contain; }
     
-    .model-name { font-size: 11px; font-weight: 600; margin-bottom: 5px; }
-    .price-fixed { font-size: 12px; font-weight: bold; color: #000; }
-    .new-price { font-size: 12px; font-weight: bold; color: #e60000; }
+    .model-name { font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #1a1a1a; }
+    .price { font-size: 14px; font-weight: 700; color: #000; margin-bottom: 10px; }
     
     .btn-order { 
       background-color: #000; color: #fff; 
-      padding: 8px 20px; text-transform: uppercase; 
-      font-size: 10px; font-weight: 600;
-      border-radius: 20px; 
-      margin-top: 8px; border: none; cursor: pointer;
-      display: inline-block;
+      padding: 10px; text-align: center;
+      text-transform: uppercase; 
+      font-size: 11px; font-weight: 700;
+      border-radius: 50px; /* Очень овальная кнопка */
+      margin-top: auto; 
     }
   </style>
 </head>
 <body>
 
   <div class="product-grid">
-    
+    <!-- Список всех 15 товаров -->
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="gucci-bag.jpg.jpeg.jpeg.png" alt="Gucci"></div>
       <p class="model-name">Gucci Messenger</p>
-      <div class="price-fixed">55 AZN</div>
+      <div class="price">55 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="lv-bag.jpg.jpeg.jpeg" alt="LV"></div>
       <p class="model-name">Louis Vuitton</p>
-      <div class="new-price">60 AZN</div>
+      <div class="price">60 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="tommy-black.png.png" alt="Tommy"></div>
       <p class="model-name">Tommy Black</p>
-      <div class="new-price">25 AZN</div>
+      <div class="price">25 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="tommy-navy.png.png" alt="Tommy"></div>
       <p class="model-name">Tommy Navy</p>
-      <div class="new-price">25 AZN</div>
+      <div class="price">25 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="armani-black.png.png" alt="Armani"></div>
       <p class="model-name">Giorgio Armani</p>
-      <div class="new-price">25 AZN</div>
+      <div class="price">25 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="kart-1.jpg.jpeg" alt="Card"></div>
       <p class="model-name">Card Holder 01</p>
-      <div class="new-price">14.99 AZN</div>
+      <div class="price">14.99 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="kart-2.jpg.jpeg" alt="Card"></div>
       <p class="model-name">Card Holder 02</p>
-      <div class="new-price">14.99 AZN</div>
+      <div class="price">14.99 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="kart-3.jpg.jpeg" alt="Card"></div>
       <p class="model-name">Card Holder 03</p>
-      <div class="new-price">14.99 AZN</div>
+      <div class="price">14.99 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="goyard-1.jpg.jpeg" alt="Goyard"></div>
       <p class="model-name">Goyard 01</p>
-      <div class="new-price">25 AZN</div>
+      <div class="price">25 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="goyard-2.jpg.jpeg" alt="Goyard"></div>
       <p class="model-name">Goyard 02</p>
-      <div class="new-price">25 AZN</div>
+      <div class="price">25 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="goyard-3.jpg.jpeg" alt="Goyard"></div>
       <p class="model-name">Goyard 03</p>
-      <div class="new-price">25 AZN</div>
+      <div class="price">25 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="goyard-4.jpg.jpeg" alt="Goyard"></div>
       <p class="model-name">Goyard 04</p>
-      <div class="new-price">25 AZN</div>
+      <div class="price">25 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="sumka-1.jpg.jpeg.jpeg" alt="Bag"></div>
       <p class="model-name">Bag 01</p>
-      <div class="new-price">35 AZN</div>
+      <div class="price">35 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="sumka-2.jpg.jpeg.jpeg" alt="Bag"></div>
       <p class="model-name">Bag 02</p>
-      <div class="new-price">35 AZN</div>
+      <div class="price">35 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
 
     <a href="https://wa.me/994507082548" class="product-card">
       <div class="img-wrapper"><img src="sumka-3.jpg.jpeg.jpeg" alt="Bag"></div>
       <p class="model-name">Bag 03</p>
-      <div class="new-price">35 AZN</div>
+      <div class="price">35 AZN</div>
       <div class="btn-order">Sifarış</div>
     </a>
-
   </div>
 </body>
 </html>
