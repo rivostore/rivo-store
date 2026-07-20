@@ -7,164 +7,150 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #ffffff; color: #000000; }
-    header { padding: 40px 20px 30px 20px; text-align: center; }
-    .catalog-container { max-width: 1200px; /* Немного увеличили контейнер для 3 колонок */ margin: 0 auto; padding: 0 20px 100px 20px; }
+    header { padding: 20px; text-align: center; }
+    .catalog-container { max-width: 1000px; margin: 0 auto; padding: 0 10px 50px 10px; }
     
-    /* --- ИЗМЕНЕНИЯ ЗДЕСЬ --- */
+    /* Сетка всегда в 3 ряда */
     .product-grid { 
       display: grid; 
-      grid-template-columns: repeat(3, 1fr); /* Три колонки на десктопе */
-      gap: 40px; /* Немного уменьшили отступы, чтобы поместилось */
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 10px; 
     }
-    
-    /* Адаптивность для планшетов (2 в ряд) */
-    @media (max-width: 850px) { 
-      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; } 
-    }
-
-    /* Адаптивность для телефонов (1 в ряд) */
-    @media (max-width: 500px) { 
-      .product-grid { grid-template-columns: 1fr; gap: 40px; } 
-    }
-    /* ------------------------ */
       
-    .product-card { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; color: inherit; cursor: pointer; }
-    
-    /* Уменьшили высоту изображения для компактности в 3 ряда */
-    .img-wrapper { width: 100%; height: 220px; display: flex; justify-content: center; align-items: center; margin-bottom: 15px; }
+    .product-card { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; color: inherit; padding: 5px; }
+    .img-wrapper { width: 100%; height: 120px; display: flex; justify-content: center; align-items: center; margin-bottom: 5px; }
     .img-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
     
-    .model-name { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
-    .price-wrapper { margin-bottom: 12px; font-size: 14px; }
-    .old-price { text-decoration: line-through; color: #666; font-weight: 500; margin-right: 8px; }
+    .model-name { font-size: 11px; font-weight: 600; margin-bottom: 4px; }
+    .price-wrapper { margin-bottom: 5px; font-size: 12px; }
+    .price-fixed { font-weight: bold; color: #000000; }
+    .old-price { text-decoration: line-through; color: #666; font-size: 10px; margin-right: 4px; }
     .new-price { font-weight: bold; color: #e60000; }
-    
-    /* Сделали кнопку чуть меньше */
-    .btn-order { background-color: #000; color: #fff; padding: 10px 25px; text-transform: uppercase; border-radius: 2px; font-size: 11px; font-weight: 600; }
+    .btn-order { background-color: #000; color: #fff; padding: 6px 10px; text-transform: uppercase; border-radius: 2px; font-size: 9px; font-weight: 600; }
   </style>
 </head>
 <body>
 
   <header>
     <a href="index.html">
-      <img src="logo.png.png" alt="RIVO STORE" style="max-width: 160px; height: auto;">
+      <img src="logo.png.png" alt="RIVO STORE" style="max-width: 120px; height: auto;">
     </a>
   </header>
 
   <main class="catalog-container">
     <div class="product-grid">
       
-      <!-- Новинка Gucci (55 AZN) -->
+      <!-- Gucci Bag -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="gucci-bag.jpg.jpeg.jpeg.png" alt="Gucci Bag"></div>
-        <p class="model-name">Gucci Messenger Bag</p>
-        <div class="price-wrapper"><span class="new-price">55.00 AZN</span></div>
-        <span class="btn-order">SİFARİŞ VER</span>
+        <p class="model-name">Gucci Messenger</p>
+        <div class="price-wrapper"><span class="price-fixed">55.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
-      <!-- Новинка LV (60 AZN) -->
+      <!-- LV Bag -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="lv-bag.jpg.jpeg.jpeg" alt="LV Bag"></div>
-        <p class="model-name">Louis Vuitton Bag</p>
-        <div class="price-wrapper"><span class="old-price">120.00 AZN</span><span class="new-price">60.00 AZN</span></div>
-        <span class="btn-order">SİFARİŞ VER</span>
+        <p class="model-name">Louis Vuitton</p>
+        <div class="price-wrapper"><span class="old-price">120</span><span class="new-price">60.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
-      <!-- Tommy Hilfiger Black -->
+      <!-- Tommy Black -->
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="tommy-black.png.png" alt="Tommy Hilfiger Black"></div>
-        <p class="model-name">Tommy Hilfiger Black</p>
-        <div class="price-wrapper"><span class="old-price">40.00 AZN</span><span class="new-price">25.00 AZN</span></div>
-        <span class="btn-order">SİFARİŞ VER</span>
+        <div class="img-wrapper"><img src="tommy-black.png.png" alt="Tommy"></div>
+        <p class="model-name">Tommy Black</p>
+        <div class="price-wrapper"><span class="old-price">40</span><span class="new-price">25.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
-      <!-- Tommy Hilfiger Navy -->
+      <!-- Tommy Navy -->
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="tommy-navy.png.png" alt="Tommy Hilfiger Navy"></div>
-        <p class="model-name">Tommy Hilfiger Navy</p>
-        <div class="price-wrapper"><span class="old-price">40.00 AZN</span><span class="new-price">25.00 AZN</span></div>
-        <span class="btn-order">SİFARİŞ VER</span>
+        <div class="img-wrapper"><img src="tommy-navy.png.png" alt="Tommy"></div>
+        <p class="model-name">Tommy Navy</p>
+        <div class="price-wrapper"><span class="old-price">40</span><span class="new-price">25.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
       <!-- Armani -->
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="armani-black.png.png" alt="Giorgio Armani Black"></div>
-        <p class="model-name">Giorgio Armani Black</p>
-        <div class="price-wrapper"><span class="old-price">40.00 AZN</span><span class="new-price">25.00 AZN</span></div>
-        <span class="btn-order">SİFARİŞ VER</span>
+        <div class="img-wrapper"><img src="armani-black.png.png" alt="Armani"></div>
+        <p class="model-name">Giorgio Armani</p>
+        <div class="price-wrapper"><span class="old-price">40</span><span class="new-price">25.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
-      <!-- Картхолдеры -->
+      <!-- Card Holders -->
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="kart-1.jpg.jpeg" alt="Card Holder"></div>
+        <div class="img-wrapper"><img src="kart-1.jpg.jpeg" alt="Card"></div>
         <p class="model-name">Card Holder 01</p>
-        <div class="price-wrapper"><span class="old-price">25.00 AZN</span><span class="new-price">14.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="price-wrapper"><span class="old-price">25</span><span class="new-price">14.99 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="kart-2.jpg.jpeg" alt="Card Holder"></div>
+        <div class="img-wrapper"><img src="kart-2.jpg.jpeg" alt="Card"></div>
         <p class="model-name">Card Holder 02</p>
-        <div class="price-wrapper"><span class="old-price">25.00 AZN</span><span class="new-price">14.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="price-wrapper"><span class="old-price">25</span><span class="new-price">14.99 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="kart-3.jpg.jpeg" alt="Card Holder"></div>
+        <div class="img-wrapper"><img src="kart-3.jpg.jpeg" alt="Card"></div>
         <p class="model-name">Card Holder 03</p>
-        <div class="price-wrapper"><span class="old-price">25.00 AZN</span><span class="new-price">14.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="price-wrapper"><span class="old-price">25</span><span class="new-price">14.99 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
-      <!-- Кошельки Goyard -->
+      <!-- Goyard -->
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="goyard-1.jpg.jpeg" alt="Goyard Wallet"></div>
-        <p class="model-name">Goyard Wallet 01</p>
-        <div class="price-wrapper"><span class="old-price">54.99 AZN</span><span class="new-price">24.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
-      </a>
-
-      <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="goyard-2.jpg.jpeg" alt="Goyard Wallet"></div>
-        <p class="model-name">Goyard Wallet 02</p>
-        <div class="price-wrapper"><span class="old-price">54.99 AZN</span><span class="new-price">24.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="img-wrapper"><img src="goyard-1.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 01</p>
+        <div class="price-wrapper"><span class="old-price">55</span><span class="new-price">25.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="goyard-3.jpg.jpeg" alt="Goyard Wallet"></div>
-        <p class="model-name">Goyard Wallet 03</p>
-        <div class="price-wrapper"><span class="old-price">54.99 AZN</span><span class="new-price">24.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="img-wrapper"><img src="goyard-2.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 02</p>
+        <div class="price-wrapper"><span class="old-price">55</span><span class="new-price">25.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
       <a href="https://wa.me/994507082548" class="product-card">
-        <div class="img-wrapper"><img src="goyard-4.jpg.jpeg" alt="Goyard Wallet"></div>
-        <p class="model-name">Goyard Wallet 04</p>
-        <div class="price-wrapper"><span class="old-price">54.99 AZN</span><span class="new-price">24.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="img-wrapper"><img src="goyard-3.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 03</p>
+        <div class="price-wrapper"><span class="old-price">55</span><span class="new-price">25.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
-      <!-- Сумки -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="goyard-4.jpg.jpeg" alt="Goyard"></div>
+        <p class="model-name">Goyard 04</p>
+        <div class="price-wrapper"><span class="old-price">55</span><span class="new-price">25.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
+      </a>
+
+      <!-- Bags -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="sumka-1.jpg.jpeg.jpeg" alt="Bag"></div>
         <p class="model-name">Bag 01</p>
-        <div class="price-wrapper"><span class="old-price">65.00 AZN</span><span class="new-price">34.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="price-wrapper"><span class="old-price">65</span><span class="new-price">35.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="sumka-2.jpg.jpeg.jpeg" alt="Bag"></div>
         <p class="model-name">Bag 02</p>
-        <div class="price-wrapper"><span class="old-price">65.00 AZN</span><span class="new-price">34.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="price-wrapper"><span class="old-price">65</span><span class="new-price">35.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="sumka-3.jpg.jpeg.jpeg" alt="Bag"></div>
         <p class="model-name">Bag 03</p>
-        <div class="price-wrapper"><span class="old-price">65.00 AZN</span><span class="new-price">34.99 AZN</span></div>
-        <span class="btn-order">Sifariş ver</span>
+        <div class="price-wrapper"><span class="old-price">65</span><span class="new-price">35.00 AZN</span></div>
+        <span class="btn-order">SİFARİŞ</span>
       </a>
 
     </div>
