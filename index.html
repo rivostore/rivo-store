@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RIVO STORE</title>
+  <title>NAZA STORE</title>
   <style>
     body { 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
@@ -14,13 +14,20 @@
     
     .container { max-width: 600px; margin: 0 auto; }
     
-    /* Аватарка */
+    /* Аватарка и название */
     .profile-header { text-align: center; margin-bottom: 20px; }
     .profile-header img { 
       width: 100px; height: 100px; 
       border-radius: 50%; 
       border: 3px solid #fff; 
       object-fit: cover; 
+    }
+    .store-title { 
+      color: #ffffff; 
+      font-size: 24px; 
+      font-weight: 800; 
+      margin-top: 10px; 
+      letter-spacing: 1px;
     }
 
     .product-grid { 
@@ -63,14 +70,37 @@
 <body>
 
   <div class="container">
-    <!-- Аватарка -->
+    <!-- Аватарка и название -->
     <div class="profile-header">
       <img src="logo.png.png" alt="Profile">
+      <div class="store-title">NAZA STORE</div>
     </div>
 
     <div class="product-grid">
       
-      <!-- Все 15 товаров -->
+      <!-- Goyard Green -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="goyard-green.jpg.png" alt="Goyard Green"></div>
+        <p class="model-name">Goyard Green</p>
+        <div class="price-container">
+          <span class="old-price">80 AZN</span>
+          <span class="new-price">45 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
+
+      <!-- Goyard Black -->
+      <a href="https://wa.me/994507082548" class="product-card">
+        <div class="img-wrapper"><img src="goyard-black.jpg.png" alt="Goyard Black"></div>
+        <p class="model-name">Goyard Black</p>
+        <div class="price-container">
+          <span class="old-price">80 AZN</span>
+          <span class="new-price">45 AZN</span>
+        </div>
+        <div class="btn-order">Sifarış</div>
+      </a>
+
+      <!-- Остальные товары -->
       <a href="https://wa.me/994507082548" class="product-card">
         <div class="img-wrapper"><img src="gucci-bag.jpg.jpeg.jpeg.png" alt="Gucci"></div>
         <p class="model-name">Gucci Messenger</p>
